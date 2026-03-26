@@ -1,11 +1,32 @@
+# NiduxOne
 
-  # Export to HTML
+Sitio web oficial de NiduxOne, la plataforma todo-en-uno para comercio unificado.
 
-  This is a code bundle for Export to HTML. The original project is available at https://www.figma.com/design/HRnU7nvpU0pyMvnIp8RG3e/Export-to-HTML.
+## Tecnologias
 
-  ## Running the code
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Material UI
+- Radix UI
 
-  Run `npm i` to install the dependencies.
+## Desarrollo
 
-  Run `npm run dev` to start the development server.
-  
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Deploy a GitHub Pages
+
+```bash
+npm run deploy
+```
+
+El sitio se publica en: https://zerocrc.github.io/niduxone/
