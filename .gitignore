@@ -4,3 +4,4 @@ dist
 *.local
 generate-images.mjs
 generate-all-images.mjs
+guidelines/
