@@ -1,0 +1,29 @@
+/*
+ * NIDUX ONE — Light Theme Styles
+ * ================================
+ * TODO: Implementar light theme correctamente.
+ *
+ * El approach correcto sería:
+ * 1. Usar CSS custom properties (variables) en todo el sitio
+ * 2. Cambiar las variables según el tema
+ * 3. NO usar !important overrides
+ *
+ * Variables necesarias:
+ * --bg-primary: #0a0a0a → #f8f8f8
+ * --bg-secondary: #090a0a → #ffffff
+ * --bg-card: rgba(255,255,255,0.03) → rgba(0,0,0,0.03)
+ * --text-primary: #ffffff → #111111
+ * --text-secondary: rgba(255,255,255,0.7) → #444444
+ * --text-muted: rgba(255,255,255,0.4) → #777777
+ * --border-color: rgba(255,255,255,0.1) → rgba(0,0,0,0.1)
+ * --accent: #C9F31D → #6db300 (darker for white bg)
+ * --glass-bg: rgba(255,255,255,0.06) → rgba(255,255,255,0.85)
+ *
+ * Secciones que SIEMPRE son dark:
+ * - Hero (#inicio) — red neuronal
+ * - Venda más (#hero-tagline) — video background
+ * - Footer
+ *
+ * Requiere refactorizar el componente para usar las variables
+ * en vez de colores hardcoded en las clases de Tailwind.
+ */

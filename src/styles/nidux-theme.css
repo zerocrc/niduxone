@@ -1,0 +1,66 @@
+/* ============================================
+   NIDUX ONE — Theme Variables
+   Dark (default) + Light
+   ============================================ */
+
+:root,
+[data-theme="dark"] {
+  --nx-bg: #0a0a0a;
+  --nx-bg-alt: #090a0a;
+  --nx-surface: rgba(255, 255, 255, 0.03);
+  --nx-surface-hover: rgba(255, 255, 255, 0.05);
+  --nx-glass: rgba(255, 255, 255, 0.06);
+  --nx-glass-strong: rgba(255, 255, 255, 0.08);
+
+  --nx-text: #ffffff;
+  --nx-text-2: rgba(255, 255, 255, 0.7);
+  --nx-text-3: rgba(255, 255, 255, 0.5);
+  --nx-text-4: rgba(255, 255, 255, 0.4);
+  --nx-text-5: rgba(255, 255, 255, 0.3);
+
+  --nx-border: rgba(255, 255, 255, 0.1);
+  --nx-border-subtle: rgba(255, 255, 255, 0.05);
+
+  --nx-accent: #C9F31D;
+  --nx-accent-dark: #a8cc0e;
+  --nx-accent-glow: rgba(201, 243, 29, 0.2);
+  --nx-accent-bg: rgba(201, 243, 29, 0.1);
+  --nx-accent-text: #C9F31D;
+
+  --nx-input-bg: rgba(255, 255, 255, 0.04);
+  --nx-input-border: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --nx-bg: #f7f7f8;
+  --nx-bg-alt: #ffffff;
+  --nx-surface: rgba(0, 0, 0, 0.03);
+  --nx-surface-hover: rgba(0, 0, 0, 0.06);
+  --nx-glass: rgba(255, 255, 255, 0.85);
+  --nx-glass-strong: rgba(255, 255, 255, 0.92);
+
+  --nx-text: #111111;
+  --nx-text-2: #444444;
+  --nx-text-3: #666666;
+  --nx-text-4: #888888;
+  --nx-text-5: #aaaaaa;
+
+  --nx-border: rgba(0, 0, 0, 0.1);
+  --nx-border-subtle: rgba(0, 0, 0, 0.05);
+
+  --nx-accent: #6db300;
+  --nx-accent-dark: #5a9e00;
+  --nx-accent-glow: rgba(109, 179, 0, 0.15);
+  --nx-accent-bg: rgba(109, 179, 0, 0.08);
+  --nx-accent-text: #5a9e00;
+
+  --nx-input-bg: rgba(0, 0, 0, 0.04);
+  --nx-input-border: rgba(0, 0, 0, 0.12);
+}
+
+/* Smooth theme transitions — only color props, not transform/opacity */
+[data-theme] *:not([data-no-transition]) {
+  transition-property: background-color, color, border-color, fill, stroke, box-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
