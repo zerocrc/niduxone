@@ -5,3 +5,4 @@ dist
 generate-images.mjs
 generate-all-images.mjs
 guidelines/
+ATTRIBUTIONS.md
