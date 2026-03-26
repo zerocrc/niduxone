@@ -16,7 +16,7 @@ function figmaAssetPlaceholder(): Plugin {
 }
 
 export default defineConfig({
-  base: '/niduxweb/',
+  base: '/niduxone/',
   plugins: [
     figmaAssetPlaceholder(),
     // The React and Tailwind plugins are both required for Make, even if
