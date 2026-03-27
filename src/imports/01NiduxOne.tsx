@@ -55,6 +55,7 @@ import imgProdPos from "../assets/products/ndx-pos.png";
 import imgProdEcommerce from "../assets/products/ndx-ecommerce.png";
 import imgProdConnect from "../assets/products/ndx-connect.png";
 import imgProdLoyalty from "../assets/products/ndx-loyalty.png";
+import WhyNiduxSection from "./WhyNidux";
 import logoAvon from "../assets/logos/avon.png";
 import logoMatra from "../assets/logos/matra.png";
 import logoMiniso from "../assets/logos/miniso.png";
@@ -1120,6 +1121,88 @@ export default function Component01NiduxOne() {
               ))}
             </div>
           </div>
+          <ScrollNext to="por-que-nidux" />
+        </div>
+      </section>
+
+      {/* ══════════════ 12. WHY NIDUX — interactive tabs ══════════════ */}
+      <WhyNiduxSection />
+
+      {/* ══════════════ 7. TESTIMONIALS — staggered cards ══════════════ */}
+      <section id="testimonios" data-reveal="scale" className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #0a0d12 0%, #0a0a0a 50%, #100a0d 100%)" }}>
+        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* header row */}
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-12">
+            <div>
+              <p className="text-[var(--nx-text-5)] text-6xl md:text-8xl font-bold uppercase tracking-tighter leading-none select-none">Testimonials</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold -mt-6 md:-mt-8 relative z-10">
+                Historias de éxito<br />de nuestros clientes
+              </h2>
+            </div>
+            <div className="flex items-center gap-4 lg:mt-auto">
+              <p className="text-sm text-[var(--nx-text-4)] max-w-xs">De la estrategia a la ejecución: así hemos transformado negocios.</p>
+              <a href="#contacto" className="shrink-0 w-12 h-12 rounded-full border border-[var(--nx-accent)] flex items-center justify-center hover:bg-[var(--nx-accent)] hover:text-black transition-all group">
+                <ArrowRight className="w-5 h-5 text-[var(--nx-accent)] group-hover:text-black" />
+              </a>
+            </div>
+          </div>
+
+          {/* staggered testimonial cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                quote: "NIDUX nos permitió integrar nuestra tienda física con la online en menos de una semana. Ahora vendemos el doble sin duplicar trabajo.",
+                name: "MARÍA LÓPEZ",
+                role: "Propietaria, Tienda de Ropa",
+                photo: imgTestMaria,
+                offset: "mt-0",
+              },
+              {
+                quote: "Desde que activamos NDX Connect, nuestras ventas por WhatsApp crecieron un 40%. Los clientes piden y pagan sin salir de la conversación.",
+                name: "CARLOS RODRÍGUEZ",
+                role: "Gerente, Restaurante",
+                photo: imgTestCarlos,
+                offset: "lg:mt-12",
+              },
+              {
+                quote: "El equipo de NIDUX nos capacitó y acompañó durante todo el proceso. Nunca nos sentimos solos. Todo fue muy fácil de entender.",
+                name: "DANIEL MORA",
+                role: "Director, Ferretería",
+                photo: imgTestDaniel,
+                offset: "lg:mt-6",
+              },
+              {
+                quote: "QPONS nos ayudó a que los clientes regresen. El programa de lealtad fue super fácil de configurar y los resultados se vieron desde el primer mes.",
+                name: "ANA RAMÍREZ",
+                role: "Dueña, Farmacia",
+                photo: imgTestAna,
+                offset: "lg:mt-16",
+              },
+            ].map((t, i) => (
+              <div key={i} className={`${t.offset}`}>
+                <div className="border-t-2 border-[var(--nx-accent)] pt-6">
+                  <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-[#C9F31D]/30 mb-4" />
+                  <p className="text-[var(--nx-accent)] text-2xl mb-3">&ldquo;&rdquo;</p>
+                  <p className="text-sm md:text-base text-[var(--nx-text-2)] leading-relaxed italic mb-6">
+                    {t.quote}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <span className="w-6 h-px bg-[var(--nx-text-4)]" />
+                    <div>
+                      <p className="font-bold text-sm text-[var(--nx-accent)]">{t.name}</p>
+                      <p className="text-xs text-[var(--nx-text-4)]">{t.role}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* dots indicator */}
+          <div className="flex justify-center gap-2 mt-10">
+            <span className="w-2 h-2 rounded-full bg-[var(--nx-accent)]" />
+            <span className="w-2 h-2 rounded-full bg-[var(--nx-border)]" />
+          </div>
           <ScrollNext to="planes" />
         </div>
       </section>
@@ -1204,196 +1287,9 @@ export default function Component01NiduxOne() {
             </div>
           </div>
           <div className="max-w-[1320px] mx-auto px-4">
-            <ScrollNext to="testimonios" />
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════ 7. TESTIMONIALS — staggered cards ══════════════ */}
-      <section id="testimonios" data-reveal="scale" className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #0a0d12 0%, #0a0a0a 50%, #100a0d 100%)" }}>
-        <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          {/* header row */}
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-12">
-            <div>
-              <p className="text-[var(--nx-text-5)] text-6xl md:text-8xl font-bold uppercase tracking-tighter leading-none select-none">Testimonials</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold -mt-6 md:-mt-8 relative z-10">
-                Historias de éxito<br />de nuestros clientes
-              </h2>
-            </div>
-            <div className="flex items-center gap-4 lg:mt-auto">
-              <p className="text-sm text-[var(--nx-text-4)] max-w-xs">De la estrategia a la ejecución: así hemos transformado negocios.</p>
-              <a href="#contacto" className="shrink-0 w-12 h-12 rounded-full border border-[var(--nx-accent)] flex items-center justify-center hover:bg-[var(--nx-accent)] hover:text-black transition-all group">
-                <ArrowRight className="w-5 h-5 text-[var(--nx-accent)] group-hover:text-black" />
-              </a>
-            </div>
-          </div>
-
-          {/* staggered testimonial cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              {
-                quote: "NIDUX nos permitió integrar nuestra tienda física con la online en menos de una semana. Ahora vendemos el doble sin duplicar trabajo.",
-                name: "MARÍA LÓPEZ",
-                role: "Propietaria, Tienda de Ropa",
-                photo: imgTestMaria,
-                offset: "mt-0",
-              },
-              {
-                quote: "Desde que activamos NDX Connect, nuestras ventas por WhatsApp crecieron un 40%. Los clientes piden y pagan sin salir de la conversación.",
-                name: "CARLOS RODRÍGUEZ",
-                role: "Gerente, Restaurante",
-                photo: imgTestCarlos,
-                offset: "lg:mt-12",
-              },
-              {
-                quote: "El equipo de NIDUX nos capacitó y acompañó durante todo el proceso. Nunca nos sentimos solos. Todo fue muy fácil de entender.",
-                name: "DANIEL MORA",
-                role: "Director, Ferretería",
-                photo: imgTestDaniel,
-                offset: "lg:mt-6",
-              },
-              {
-                quote: "QPONS nos ayudó a que los clientes regresen. El programa de lealtad fue super fácil de configurar y los resultados se vieron desde el primer mes.",
-                name: "ANA RAMÍREZ",
-                role: "Dueña, Farmacia",
-                photo: imgTestAna,
-                offset: "lg:mt-16",
-              },
-            ].map((t, i) => (
-              <div key={i} className={`${t.offset}`}>
-                <div className="border-t-2 border-[var(--nx-accent)] pt-6">
-                  <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-[#C9F31D]/30 mb-4" />
-                  <p className="text-[var(--nx-accent)] text-2xl mb-3">&ldquo;&rdquo;</p>
-                  <p className="text-sm md:text-base text-[var(--nx-text-2)] leading-relaxed italic mb-6">
-                    {t.quote}
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <span className="w-6 h-px bg-[var(--nx-text-4)]" />
-                    <div>
-                      <p className="font-bold text-sm text-[var(--nx-accent)]">{t.name}</p>
-                      <p className="text-xs text-[var(--nx-text-4)]">{t.role}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* dots indicator */}
-          <div className="flex justify-center gap-2 mt-10">
-            <span className="w-2 h-2 rounded-full bg-[var(--nx-accent)]" />
-            <span className="w-2 h-2 rounded-full bg-[var(--nx-border)]" />
-          </div>
-          <ScrollNext to="beneficios" />
-        </div>
-      </section>
-
-      {/* ══════════════ 8. MARQUEE ══════════════ */}
-      <section data-reveal="up" className="relative py-12 bg-[var(--nx-bg)] overflow-hidden border-y border-[var(--nx-border-subtle)]">
-        <div className="flex items-center gap-8 animate-marquee whitespace-nowrap">
-          {[...Array(3)].map((_, rep) => (
-            <div key={rep} className="flex items-center gap-8 shrink-0">
-              <span className="text-2xl md:text-4xl font-bold font-['Poppins'] text-[var(--nx-text-5)]">
-                Más de 2,000 comercios ya confían en NIDUX
-              </span>
-              <img src={imgEllipse177} alt="" className="w-6 h-6 opacity-40" />
-              <span className="text-lg md:text-2xl text-[var(--nx-text-5)] font-['Poppins']">
-                BCR &middot; Mastercard &middot; Correos de CR &middot; Meta &middot; AWS &middot; Google
-              </span>
-              <img src={imgEllipse177} alt="" className="w-6 h-6 opacity-40" />
-            </div>
-          ))}
-        </div>
-        <style>{`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-33.33%); }
-          }
-          .animate-marquee {
-            animation: marquee 30s linear infinite;
-          }
-        `}</style>
-      </section>
-
-      {/* ══════════════ 9. BENEFICIO CLAVE — carousel cards ══════════════ */}
-      <section id="beneficios" data-reveal className="relative py-12 md:py-16 overflow-hidden snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(180deg, #0c0d0a 0%, #0a0a0a 100%)" }}>
-        <GreenGlow className="absolute -left-40 top-1/2 -translate-y-1/2" />
-
-        <div className="w-full relative z-10">
-          <div className="text-center mb-10 md:mb-14 px-4">
-            <span className="text-[var(--nx-accent)] text-xs font-semibold tracking-[0.2em] uppercase">PARA TODO TIPO DE NEGOCIO</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              NIDUX se adapta a <span className="text-[var(--nx-accent)]">su industria</span>
-            </h2>
-          </div>
-
-          {/* auto-scrolling carousel */}
-          <div className="overflow-hidden">
-            <div className="flex gap-5 animate-industry-carousel">
-              {[
-                { icon: "👗", name: "Moda & Ropa", desc: "Gestione tallas, colores y temporadas. Venda en tienda y online sin descuadres.", glow: "from-pink-500/20" },
-                { icon: "🍽️", name: "Restaurantes", desc: "Menú digital, pedidos por WhatsApp y control de inventario de ingredientes.", glow: "from-orange-500/20" },
-                { icon: "🔧", name: "Ferreterías", desc: "Miles de SKUs organizados. Búsqueda rápida y facturación al instante.", glow: "from-yellow-500/20" },
-                { icon: "💊", name: "Farmacias", desc: "Control de lotes, vencimientos y recetas. Inventario farmacéutico preciso.", glow: "from-emerald-500/20" },
-                { icon: "🛒", name: "Supermercados", desc: "Alto volumen, múltiples cajas, pesaje integrado. Escale sin límites.", glow: "from-blue-500/20" },
-                { icon: "🌐", name: "Tienda Online", desc: "100% digital. Su ecommerce profesional funcionando en minutos.", glow: "from-violet-500/20" },
-                { icon: "☕", name: "Cafeterías", desc: "Pedidos rápidos, programa de lealtad y gestión de sucursales.", glow: "from-amber-500/20" },
-                { icon: "💄", name: "Cosméticos", desc: "Catálogo visual, ventas por redes sociales y envíos integrados.", glow: "from-rose-500/20" },
-                { icon: "👗", name: "Moda & Ropa", desc: "Gestione tallas, colores y temporadas. Venda en tienda y online sin descuadres.", glow: "from-pink-500/20" },
-                { icon: "🍽️", name: "Restaurantes", desc: "Menú digital, pedidos por WhatsApp y control de inventario de ingredientes.", glow: "from-orange-500/20" },
-                { icon: "🔧", name: "Ferreterías", desc: "Miles de SKUs organizados. Búsqueda rápida y facturación al instante.", glow: "from-yellow-500/20" },
-                { icon: "💊", name: "Farmacias", desc: "Control de lotes, vencimientos y recetas. Inventario farmacéutico preciso.", glow: "from-emerald-500/20" },
-                { icon: "🛒", name: "Supermercados", desc: "Alto volumen, múltiples cajas, pesaje integrado. Escale sin límites.", glow: "from-blue-500/20" },
-                { icon: "🌐", name: "Tienda Online", desc: "100% digital. Su ecommerce profesional funcionando en minutos.", glow: "from-violet-500/20" },
-                { icon: "☕", name: "Cafeterías", desc: "Pedidos rápidos, programa de lealtad y gestión de sucursales.", glow: "from-amber-500/20" },
-                { icon: "💄", name: "Cosméticos", desc: "Catálogo visual, ventas por redes sociales y envíos integrados.", glow: "from-rose-500/20" },
-              ].map((cat, i) => (
-                <div
-                  key={i}
-                  className={`shrink-0 w-[260px] md:w-[300px] group relative rounded-2xl border border-[var(--nx-border)] bg-gradient-to-b ${cat.glow} to-[var(--nx-bg)] p-6 md:p-7 flex flex-col justify-between min-h-[320px] md:min-h-[360px] hover:border-[#C9F31D]/30 hover:shadow-[0_0_30px_rgba(201,243,29,0.06)] transition-all duration-500 cursor-pointer`}
-                >
-                  {/* icon */}
-                  <div className="text-6xl md:text-7xl mb-4 group-hover:scale-110 transition-transform duration-500">
-                    {cat.icon}
-                  </div>
-
-                  {/* content */}
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold group-hover:text-[var(--nx-accent)] transition-colors">{cat.name}</h3>
-                    <p className="text-sm text-[var(--nx-text-4)] mt-2 leading-relaxed group-hover:text-[var(--nx-text-3)] transition-colors">{cat.desc}</p>
-                  </div>
-
-                  {/* hover arrow */}
-                  <div className="absolute top-5 right-5 w-8 h-8 rounded-full border border-[var(--nx-border)] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:border-[#C9F31D]/40 transition-all">
-                    <ArrowRight className="w-3.5 h-3.5 text-[var(--nx-accent)]" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-10 text-center">
-            <a href="#contacto" className="text-[var(--nx-accent)] text-sm font-semibold hover:underline inline-flex items-center gap-2">
-              ¿Su industria no aparece? También la cubrimos <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-          <div className="px-4">
             <ScrollNext to="alianzas" />
           </div>
         </div>
-
-        <style>{`
-          @keyframes industry-carousel {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-industry-carousel {
-            animation: industry-carousel 35s linear infinite;
-          }
-          .animate-industry-carousel:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
       </section>
 
       {/* ══════════════ 10. ECOSISTEMA — Apple style ══════════════ */}
@@ -1472,6 +1368,33 @@ export default function Component01NiduxOne() {
         </div>
       </section>
 
+      {/* ══════════════ 8. MARQUEE ══════════════ */}
+      <section data-reveal="up" className="relative py-12 bg-[var(--nx-bg)] overflow-hidden border-y border-[var(--nx-border-subtle)]">
+        <div className="flex items-center gap-8 animate-marquee whitespace-nowrap">
+          {[...Array(3)].map((_, rep) => (
+            <div key={rep} className="flex items-center gap-8 shrink-0">
+              <span className="text-2xl md:text-4xl font-bold font-['Poppins'] text-[var(--nx-text-5)]">
+                Más de 2,000 comercios ya confían en NIDUX
+              </span>
+              <img src={imgEllipse177} alt="" className="w-6 h-6 opacity-40" />
+              <span className="text-lg md:text-2xl text-[var(--nx-text-5)] font-['Poppins']">
+                BCR &middot; Mastercard &middot; Correos de CR &middot; Meta &middot; AWS &middot; Google
+              </span>
+              <img src={imgEllipse177} alt="" className="w-6 h-6 opacity-40" />
+            </div>
+          ))}
+        </div>
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.33%); }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+        `}</style>
+      </section>
+
       {/* ══════════════ 11. CONTACT — premium redesign ══════════════ */}
       <section id="contacto" data-reveal="scale" className="relative py-16 md:py-20 snap-start shrink-0 min-h-screen flex items-center overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(201,243,29,0.04) 0%, #0a0a0a 60%)" }}>
         <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -1536,8 +1459,6 @@ export default function Component01NiduxOne() {
         </div>
       </section>
 
-      {/* Plans section moved after products */}
-
       {/* ══════════════ FINAL CTA ══════════════ */}
       <section data-reveal="scale" className="relative py-20 md:py-28 snap-start shrink-0 min-h-[70vh] flex items-center overflow-hidden" style={{ background: "linear-gradient(180deg, #0a0a0a 0%, #0d100a 50%, #0a0a0a 100%)" }}>
         {/* large decorative arrow */}
@@ -1575,6 +1496,84 @@ export default function Component01NiduxOne() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* ══════════════ 9. BENEFICIO CLAVE — carousel cards ══════════════ */}
+      <section id="beneficios" data-reveal className="relative py-12 md:py-16 overflow-hidden snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(180deg, #0c0d0a 0%, #0a0a0a 100%)" }}>
+        <GreenGlow className="absolute -left-40 top-1/2 -translate-y-1/2" />
+
+        <div className="w-full relative z-10">
+          <div className="text-center mb-10 md:mb-14 px-4">
+            <span className="text-[var(--nx-accent)] text-xs font-semibold tracking-[0.2em] uppercase">PARA TODO TIPO DE NEGOCIO</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+              NIDUX se adapta a <span className="text-[var(--nx-accent)]">su industria</span>
+            </h2>
+          </div>
+
+          {/* auto-scrolling carousel */}
+          <div className="overflow-hidden">
+            <div className="flex gap-5 animate-industry-carousel">
+              {[
+                { icon: "👗", name: "Moda & Ropa", desc: "Gestione tallas, colores y temporadas. Venda en tienda y online sin descuadres.", glow: "from-pink-500/20" },
+                { icon: "🍽️", name: "Restaurantes", desc: "Menú digital, pedidos por WhatsApp y control de inventario de ingredientes.", glow: "from-orange-500/20" },
+                { icon: "🔧", name: "Ferreterías", desc: "Miles de SKUs organizados. Búsqueda rápida y facturación al instante.", glow: "from-yellow-500/20" },
+                { icon: "💊", name: "Farmacias", desc: "Control de lotes, vencimientos y recetas. Inventario farmacéutico preciso.", glow: "from-emerald-500/20" },
+                { icon: "🛒", name: "Supermercados", desc: "Alto volumen, múltiples cajas, pesaje integrado. Escale sin límites.", glow: "from-blue-500/20" },
+                { icon: "🌐", name: "Tienda Online", desc: "100% digital. Su ecommerce profesional funcionando en minutos.", glow: "from-violet-500/20" },
+                { icon: "☕", name: "Cafeterías", desc: "Pedidos rápidos, programa de lealtad y gestión de sucursales.", glow: "from-amber-500/20" },
+                { icon: "💄", name: "Cosméticos", desc: "Catálogo visual, ventas por redes sociales y envíos integrados.", glow: "from-rose-500/20" },
+                { icon: "👗", name: "Moda & Ropa", desc: "Gestione tallas, colores y temporadas. Venda en tienda y online sin descuadres.", glow: "from-pink-500/20" },
+                { icon: "🍽️", name: "Restaurantes", desc: "Menú digital, pedidos por WhatsApp y control de inventario de ingredientes.", glow: "from-orange-500/20" },
+                { icon: "🔧", name: "Ferreterías", desc: "Miles de SKUs organizados. Búsqueda rápida y facturación al instante.", glow: "from-yellow-500/20" },
+                { icon: "💊", name: "Farmacias", desc: "Control de lotes, vencimientos y recetas. Inventario farmacéutico preciso.", glow: "from-emerald-500/20" },
+                { icon: "🛒", name: "Supermercados", desc: "Alto volumen, múltiples cajas, pesaje integrado. Escale sin límites.", glow: "from-blue-500/20" },
+                { icon: "🌐", name: "Tienda Online", desc: "100% digital. Su ecommerce profesional funcionando en minutos.", glow: "from-violet-500/20" },
+                { icon: "☕", name: "Cafeterías", desc: "Pedidos rápidos, programa de lealtad y gestión de sucursales.", glow: "from-amber-500/20" },
+                { icon: "💄", name: "Cosméticos", desc: "Catálogo visual, ventas por redes sociales y envíos integrados.", glow: "from-rose-500/20" },
+              ].map((cat, i) => (
+                <div
+                  key={i}
+                  className={`shrink-0 w-[260px] md:w-[300px] group relative rounded-2xl border border-[var(--nx-border)] bg-gradient-to-b ${cat.glow} to-[var(--nx-bg)] p-6 md:p-7 flex flex-col justify-between min-h-[320px] md:min-h-[360px] hover:border-[#C9F31D]/30 hover:shadow-[0_0_30px_rgba(201,243,29,0.06)] transition-all duration-500 cursor-pointer`}
+                >
+                  {/* icon */}
+                  <div className="text-6xl md:text-7xl mb-4 group-hover:scale-110 transition-transform duration-500">
+                    {cat.icon}
+                  </div>
+
+                  {/* content */}
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold group-hover:text-[var(--nx-accent)] transition-colors">{cat.name}</h3>
+                    <p className="text-sm text-[var(--nx-text-4)] mt-2 leading-relaxed group-hover:text-[var(--nx-text-3)] transition-colors">{cat.desc}</p>
+                  </div>
+
+                  {/* hover arrow */}
+                  <div className="absolute top-5 right-5 w-8 h-8 rounded-full border border-[var(--nx-border)] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:border-[#C9F31D]/40 transition-all">
+                    <ArrowRight className="w-3.5 h-3.5 text-[var(--nx-accent)]" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <a href="#contacto" className="text-[var(--nx-accent)] text-sm font-semibold hover:underline inline-flex items-center gap-2">
+              ¿Su industria no aparece? También la cubrimos <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
+        <style>{`
+          @keyframes industry-carousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-industry-carousel {
+            animation: industry-carousel 35s linear infinite;
+          }
+          .animate-industry-carousel:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* ══════════════ 13. FOOTER (always dark) ══════════════ */}
