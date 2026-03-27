@@ -212,7 +212,7 @@ function SliderInput({
           onChange={(e) => onChange(Number(e.target.value))}
           className="w-full h-2 appearance-none rounded-full cursor-pointer"
           style={{
-            background: `linear-gradient(to right, #C9F31D ${pct}%, rgba(255,255,255,0.1) ${pct}%)`,
+            background: `linear-gradient(to right, #efc133 ${pct}%, rgba(255,255,255,0.1) ${pct}%)`,
           }}
         />
       </div>
@@ -232,7 +232,7 @@ const INDUSTRIES = [
 ];
 
 const PAIN_POINTS = [
-  { id: "inventario", label: "Inventario desordenado", icon: Package, module: "NDX POS", color: "#C9F31D" },
+  { id: "inventario", label: "Inventario desordenado", icon: Package, module: "NDX POS", color: "#efc133" },
   { id: "canales", label: "Canales desconectados", icon: Unlink, module: "NDX Ecommerce", color: "#22d3ee" },
   { id: "clientes", label: "No conozco a mis clientes", icon: Users, module: "NDX Loyalty", color: "#f472b6" },
   { id: "whatsapp", label: "WhatsApp manual y lento", icon: MessageCircle, module: "NDX Connect", color: "#4ade80" },
@@ -291,7 +291,7 @@ function EcosystemBuilder() {
                   }}
                   className={`flex flex-col items-center gap-2 p-5 rounded-2xl border transition hover:scale-[1.03] ${
                     industry === ind.id
-                      ? "border-[var(--nx-accent)] bg-[var(--nx-accent)]/10 shadow-[0_0_20px_rgba(201,243,29,0.1)]"
+                      ? "border-[var(--nx-accent)] bg-[var(--nx-accent)]/10 shadow-[0_0_20px_rgba(239,193,51,0.1)]"
                       : "border-[var(--nx-border)] bg-[var(--nx-surface)] hover:border-[var(--nx-accent)]/40"
                   }`}
                 >
@@ -467,7 +467,7 @@ function RetentionSimulator() {
                 if (simulating) resetSimulation();
               }}
               placeholder="Ej: Crema Facial Premium"
-              className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#C9F31D]/50 focus:outline-none transition"
+              className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#efc133]/50 focus:outline-none transition"
             />
             <Sparkles className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--nx-accent)]" />
           </div>
@@ -616,7 +616,7 @@ export default function WhyNiduxSection() {
       id="por-que-nidux"
       data-reveal="scale"
       className="relative py-16 md:py-24 snap-start shrink-0 overflow-hidden"
-      style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(201,243,29,0.03) 0%, #0B1120 70%)" }}
+      style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(239,193,51,0.03) 0%, #0B1120 70%)" }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -643,7 +643,7 @@ export default function WhyNiduxSection() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition ${
                   isActive
-                    ? "bg-[var(--nx-accent)] text-black shadow-[0_0_20px_rgba(201,243,29,0.2)]"
+                    ? "bg-[var(--nx-accent)] text-black shadow-[0_0_20px_rgba(239,193,51,0.2)]"
                     : "bg-[var(--nx-card,#131c2e)] border border-white/[0.08] text-[var(--nx-text-3)] hover:border-[var(--nx-accent)]/40 hover:text-[var(--nx-text)]"
                 }`}
               >
@@ -674,18 +674,18 @@ export default function WhyNiduxSection() {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: #C9F31D;
+          background: #efc133;
           cursor: pointer;
-          box-shadow: 0 0 10px rgba(201,243,29,0.4);
+          box-shadow: 0 0 10px rgba(239,193,51,0.4);
         }
         input[type="range"]::-moz-range-thumb {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: #C9F31D;
+          background: #efc133;
           cursor: pointer;
           border: none;
-          box-shadow: 0 0 10px rgba(201,243,29,0.4);
+          box-shadow: 0 0 10px rgba(239,193,51,0.4);
         }
       `}</style>
     </section>

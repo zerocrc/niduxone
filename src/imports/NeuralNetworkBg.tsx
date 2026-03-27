@@ -140,10 +140,10 @@ void main() {
   float glow = exp(-d * 8.0);
 
   // color palette -- green spectrum
-  vec3 primary   = vec3(0.788, 0.953, 0.114); // #C9F31D
-  vec3 secondary = vec3(0.659, 0.800, 0.055); // #a8cc0e
+  vec3 primary   = vec3(0.937, 0.757, 0.200); // #efc133
+  vec3 secondary = vec3(0.831, 0.659, 0.165); // #d4a82a
   vec3 tertiary  = vec3(0.898, 1.000, 0.541); // #e5ff8a
-  vec3 accent    = vec3(0.478, 0.722, 0.000); // #7ab800
+  vec3 accent    = vec3(0.831, 0.659, 0.165); // #d4a82a
   vec3 highlight = vec3(0.941, 1.000, 0.420); // #f0ff6b
 
   float t = sin(uTime * 0.5 + vLayer * 2.0) * 0.5 + 0.5;
@@ -229,8 +229,8 @@ varying float vProgress;
 varying float vPulse;
 
 void main() {
-  vec3 primary  = vec3(0.788, 0.953, 0.114); // #C9F31D
-  vec3 accent   = vec3(0.478, 0.722, 0.000); // #7ab800
+  vec3 primary  = vec3(0.937, 0.757, 0.200); // #efc133
+  vec3 accent   = vec3(0.831, 0.659, 0.165); // #d4a82a
   vec3 highlight= vec3(0.941, 1.000, 0.420); // #f0ff6b
 
   vec3 col = mix(accent, primary, vProgress);

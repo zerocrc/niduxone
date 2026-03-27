@@ -113,7 +113,7 @@ const ScrollNext = ({ to, label = "" }: { to: string; label?: string }) => (
           {label}
         </span>
       )}
-      <div className="w-8 h-8 rounded-full border border-[var(--nx-border)] group-hover:border-[#C9F31D]/50 flex items-center justify-center transition-all group-hover:shadow-[0_0_15px_rgba(201,243,29,0.15)]">
+      <div className="w-8 h-8 rounded-full border border-[var(--nx-border)] group-hover:border-[#efc133]/50 flex items-center justify-center transition-all group-hover:shadow-[0_0_15px_rgba(239,193,51,0.15)]">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-[var(--nx-text-3)] group-hover:text-[var(--nx-accent)] transition-colors">
           <path d="M6 2v8m0 0l3-3m-3 3L3 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -125,7 +125,7 @@ const ScrollNext = ({ to, label = "" }: { to: string; label?: string }) => (
 /* ───────────────────────── tiny SVG helpers ───────────────────────── */
 
 const CheckIcon = () => (
-  <div className="w-5 h-5 rounded-full bg-[#C9F31D] flex items-center justify-center shrink-0">
+  <div className="w-5 h-5 rounded-full bg-[#efc133] flex items-center justify-center shrink-0">
     <CircleCheckBig className="w-3.5 h-3.5 text-black" />
   </div>
 );
@@ -155,7 +155,7 @@ const CloseIcon = () => (
 /* green glow decoration reusable */
 const GreenGlow = ({ className = "" }: { className?: string }) => (
   <div className={`pointer-events-none ${className}`}>
-    <div className="w-[360px] h-[360px] rounded-full bg-[#C9F31D] opacity-20 blur-[120px]" />
+    <div className="w-[360px] h-[360px] rounded-full bg-[#efc133] opacity-20 blur-[120px]" />
   </div>
 );
 
@@ -332,11 +332,11 @@ function ProductBadge3D({
         <div
           className={`w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full backdrop-blur-2xl border-2 flex flex-col items-center justify-center text-center transition-all duration-300 cursor-pointer ${
             isHovered
-              ? "bg-[#C9F31D]/25 border-[#C9F31D] shadow-[0_0_60px_rgba(201,243,29,0.35),0_0_120px_rgba(201,243,29,0.1)]"
-              : "bg-[#0B1120]/70 border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:border-[#C9F31D]/40"
+              ? "bg-[#efc133]/25 border-[#efc133] shadow-[0_0_60px_rgba(239,193,51,0.35),0_0_120px_rgba(239,193,51,0.1)]"
+              : "bg-[#0B1120]/70 border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:border-[#efc133]/40"
           }`}
         >
-          <p className={`text-xs md:text-sm lg:text-base font-bold leading-tight transition-colors duration-300 ${isHovered ? "text-[#C9F31D]" : "text-white"}`}>
+          <p className={`text-xs md:text-sm lg:text-base font-bold leading-tight transition-colors duration-300 ${isHovered ? "text-[#efc133]" : "text-white"}`}>
             {product.label.replace("NDX ", "")}
           </p>
           <span className={`text-[9px] md:text-[11px] mt-1 transition-colors duration-300 ${isHovered ? "text-white/80" : "text-white/40"}`}>
@@ -355,19 +355,19 @@ function ProductBadge3D({
             transform: popupStyle.placeBelow ? "translate(-50%, 0)" : "translate(-50%, -100%)",
           }}
         >
-          <div className="relative backdrop-blur-2xl bg-[#0B1120]/95 border border-[#C9F31D]/25 rounded-2xl p-5 shadow-[0_24px_64px_rgba(0,0,0,0.7),0_0_40px_rgba(201,243,29,0.1)]">
+          <div className="relative backdrop-blur-2xl bg-[#0B1120]/95 border border-[#efc133]/25 rounded-2xl p-5 shadow-[0_24px_64px_rgba(0,0,0,0.7),0_0_40px_rgba(239,193,51,0.1)]">
             {/* arrow — points up or down depending on placement */}
-            <div className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-[#0B1120]/95 border-[#C9F31D]/25 ${
+            <div className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-[#0B1120]/95 border-[#efc133]/25 ${
               popupStyle.placeBelow
                 ? "-top-2 border-l border-t"
                 : "-bottom-2 border-r border-b"
             }`} />
-            <h4 className="text-[#C9F31D] font-bold text-base mb-2">{product.label}</h4>
+            <h4 className="text-[#efc133] font-bold text-base mb-2">{product.label}</h4>
             <p className="text-white/60 text-sm leading-relaxed mb-4">{product.details}</p>
             <ul className="space-y-2">
               {product.features.map((f, fi) => (
                 <li key={fi} className="flex items-center gap-2.5 text-sm text-white/80">
-                  <svg className="w-4 h-4 shrink-0 text-[#C9F31D]" viewBox="0 0 20 20" fill="none">
+                  <svg className="w-4 h-4 shrink-0 text-[#efc133]" viewBox="0 0 20 20" fill="none">
                     <circle cx="10" cy="10" r="10" fill="currentColor" />
                     <path d="M6 10.5l2.5 2.5L14 8" stroke="#0B1120" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -401,7 +401,7 @@ function HeroSlider() {
         {/* top headline */}
         <div className="absolute top-12 md:top-16 left-0 right-0 z-[1] pointer-events-none text-center px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]">
-            Comercio <span className="text-[#C9F31D]">unificado</span>
+            Comercio <span className="text-[#efc133]">unificado</span>
           </h1>
         </div>
 
@@ -409,9 +409,9 @@ function HeroSlider() {
         <div className="absolute inset-0 z-[2] flex items-center justify-center pointer-events-none -translate-y-[8vh]">
           <div className="relative w-[90vw] h-[90vw] max-w-[600px] max-h-[600px] flex items-center justify-center">
             {/* glass orb behind logo — the NIDUX universe */}
-            <div className="absolute w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full backdrop-blur-2xl bg-white/[0.03] border border-white/[0.07] shadow-[0_0_80px_rgba(201,243,29,0.06),0_0_120px_rgba(0,0,0,0.5),inset_0_0_40px_rgba(201,243,29,0.02)]" style={{ zIndex: 10 }} />
+            <div className="absolute w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full backdrop-blur-2xl bg-white/[0.03] border border-white/[0.07] shadow-[0_0_80px_rgba(239,193,51,0.06),0_0_120px_rgba(0,0,0,0.5),inset_0_0_40px_rgba(239,193,51,0.02)]" style={{ zIndex: 10 }} />
             {/* inner ring accent */}
-            <div className="absolute w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border border-[#C9F31D]/[0.06]" style={{ zIndex: 10 }} />
+            <div className="absolute w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border border-[#efc133]/[0.06]" style={{ zIndex: 10 }} />
 
             {/* NIDUX ONE logo — always on top of badges */}
             <img
@@ -420,7 +420,7 @@ function HeroSlider() {
               className="relative w-40 md:w-56 lg:w-64 pointer-events-none"
               style={{
                 zIndex: 50,
-                filter: "drop-shadow(0 0 50px rgba(201,243,29,0.12)) drop-shadow(0 2px 10px rgba(0,0,0,0.6))",
+                filter: "drop-shadow(0 0 50px rgba(239,193,51,0.12)) drop-shadow(0 2px 10px rgba(0,0,0,0.6))",
               }}
             />
 
@@ -444,7 +444,7 @@ function HeroSlider() {
             <p className="text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-1 drop-shadow-[0_2px_20px_rgba(0,0,0,0.9)]">
               Tienda. Online. WhatsApp. Lealtad.
             </p>
-            <p className="text-[#C9F31D] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mb-6 drop-shadow-[0_2px_20px_rgba(0,0,0,0.9)]">
+            <p className="text-[#efc133] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mb-6 drop-shadow-[0_2px_20px_rgba(0,0,0,0.9)]">
               Un solo ecosistema. Cero complicaciones.
             </p>
             <button
@@ -452,11 +452,11 @@ function HeroSlider() {
               className="pointer-events-auto group flex flex-col items-center gap-4 mx-auto cursor-pointer"
               aria-label="Scroll down"
             >
-              <span className="text-sm md:text-base tracking-[0.15em] uppercase text-white/60 group-hover:text-[#C9F31D] transition-colors font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              <span className="text-sm md:text-base tracking-[0.15em] uppercase text-white/60 group-hover:text-[#efc133] transition-colors font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 Descubrir
               </span>
-              <div className="w-12 h-20 rounded-full border-2 border-white/30 group-hover:border-[#C9F31D] flex items-start justify-center pt-3 transition-all duration-300 shadow-[0_0_30px_rgba(201,243,29,0.1)] group-hover:shadow-[0_0_40px_rgba(201,243,29,0.25)]">
-                <div className="w-2 h-4 rounded-full bg-[#C9F31D] animate-scroll-dot shadow-[0_0_10px_rgba(201,243,29,0.5)]" />
+              <div className="w-12 h-20 rounded-full border-2 border-white/30 group-hover:border-[#efc133] flex items-start justify-center pt-3 transition-all duration-300 shadow-[0_0_30px_rgba(239,193,51,0.1)] group-hover:shadow-[0_0_40px_rgba(239,193,51,0.25)]">
+                <div className="w-2 h-4 rounded-full bg-[#efc133] animate-scroll-dot shadow-[0_0_10px_rgba(239,193,51,0.5)]" />
               </div>
             </button>
           </div>
@@ -480,13 +480,13 @@ function HeroSlider() {
         </video>
         {/* dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/65" />
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(201,243,29,0.05) 0%, transparent 60%)" }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(239,193,51,0.05) 0%, transparent 60%)" }} />
 
         <div data-reveal="scale" className="relative z-10 max-w-5xl mx-auto px-6 pt-20 text-center">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1] tracking-tight drop-shadow-2xl">
             Venda más.
             <br />
-            <span className="text-[#C9F31D]">En todos los canales.</span>
+            <span className="text-[#efc133]">En todos los canales.</span>
             <br />
             <span className="text-white/80">Desde un solo lugar.</span>
           </h1>
@@ -498,7 +498,7 @@ function HeroSlider() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#agendar"
-              className="inline-flex items-center justify-center gap-3 bg-[#C9F31D] text-black font-bold text-sm px-8 py-4 rounded-full hover:brightness-110 transition shadow-[0_0_30px_rgba(201,243,29,0.2)]"
+              className="inline-flex items-center justify-center gap-3 bg-[#efc133] text-black font-bold text-sm px-8 py-4 rounded-full hover:brightness-110 transition shadow-[0_0_30px_rgba(239,193,51,0.2)]"
             >
               Agendar Demo
               <ArrowRight className="w-4 h-4 text-black" />
@@ -512,7 +512,7 @@ function HeroSlider() {
           </div>
 
           <p className="mt-6 text-xs text-white/30 flex items-center gap-1.5 justify-center">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C9F31D]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#efc133]" />
             +2,000 comercios activos en Costa Rica
           </p>
 
@@ -674,7 +674,7 @@ export default function Component01NiduxOne() {
             {/* theme toggle */}
             <button
               onClick={toggleTheme}
-              className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 hover:border-[#C9F31D]/50 transition-colors"
+              className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 hover:border-[#efc133]/50 transition-colors"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? (
@@ -687,7 +687,7 @@ export default function Component01NiduxOne() {
             {/* desktop CTA */}
             <a
               href="#agendar"
-              className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#C9F31D] to-[#a8cc0e] text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:brightness-110 transition"
+              className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-[#efc133] to-[#a8cc0e] text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:brightness-110 transition"
             >
               Agendar Demo
               <span className="w-6 h-6 rounded-full bg-black/20 flex items-center justify-center">
@@ -717,7 +717,7 @@ export default function Component01NiduxOne() {
             ))}
             <a
               href="#agendar"
-              className="mt-2 flex items-center justify-center gap-2 bg-[#C9F31D] text-black font-semibold text-sm px-5 py-3 rounded-full"
+              className="mt-2 flex items-center justify-center gap-2 bg-[#efc133] text-black font-semibold text-sm px-5 py-3 rounded-full"
               onClick={() => setMenuOpen(false)}
             >
               Agendar Demo
@@ -746,7 +746,7 @@ export default function Component01NiduxOne() {
               </span>
               <h2 data-line-draw className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.1] pb-2">
                 Impulsando el{" "}
-                <span className="text-[var(--nx-accent)] underline decoration-[#C9F31D]/30 underline-offset-4">
+                <span className="text-[var(--nx-accent)] underline decoration-[#efc133]/30 underline-offset-4">
                   comercio digital
                 </span>
                 {" "}en la región
@@ -787,7 +787,7 @@ export default function Component01NiduxOne() {
                 <p className="text-[var(--nx-text-4)] text-sm mt-1">Tiendas creadas</p>
               </div>
 
-              <div data-fade data-delay="3" data-hover-lift className="rounded-2xl border border-[#C9F31D]/15 bg-[var(--nx-card,#131c2e)] p-6 flex flex-col justify-center">
+              <div data-fade data-delay="3" data-hover-lift className="rounded-2xl border border-[#efc133]/15 bg-[var(--nx-card,#131c2e)] p-6 flex flex-col justify-center">
                 <MapPin className="w-8 h-8 text-[var(--nx-accent)] mb-3 opacity-60" />
                 <p data-counter="6" data-counter-suffix="+" className="text-[var(--nx-accent)] text-5xl font-bold">0</p>
                 <p className="text-[var(--nx-text-4)] text-sm mt-1">Países en la región</p>
@@ -806,7 +806,7 @@ export default function Component01NiduxOne() {
                     <div className="w-11 h-11 rounded-full bg-[var(--nx-accent)] flex items-center justify-center text-black">
                       {p.icon}
                     </div>
-                    {i < arr.length - 1 && <div className="w-px flex-1 bg-[#C9F31D]/20 mt-2" />}
+                    {i < arr.length - 1 && <div className="w-px flex-1 bg-[#efc133]/20 mt-2" />}
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">{p.title}</h4>
@@ -824,7 +824,7 @@ export default function Component01NiduxOne() {
             </div>
           </div>
           {/* client logos — animated marquee on green bg */}
-          <div className="mt-8 md:mt-12 rounded-2xl bg-[#C9F31D] py-6 md:py-8 overflow-hidden">
+          <div className="mt-8 md:mt-12 rounded-2xl bg-[#efc133] py-6 md:py-8 overflow-hidden">
             <p className="text-center text-xs text-black/50 uppercase tracking-widest mb-5 font-semibold">Empresas que confían en nosotros</p>
             <div className="overflow-hidden">
               <div className="flex items-center gap-14 md:gap-20 animate-logo-marquee">
@@ -916,7 +916,7 @@ export default function Component01NiduxOne() {
             ].map((card, i) => (
               <div
                 key={i}
-                className={`group relative rounded-2xl border border-white/[0.08] overflow-hidden cursor-pointer transition-all duration-300 hover:border-[#C9F31D]/30 hover:shadow-[0_0_30px_rgba(201,243,29,0.06)] ${card.span}`}
+                className={`group relative rounded-2xl border border-white/[0.08] overflow-hidden cursor-pointer transition-all duration-300 hover:border-[#efc133]/30 hover:shadow-[0_0_30px_rgba(239,193,51,0.06)] ${card.span}`}
               >
                 {/* background image */}
                 <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -925,7 +925,7 @@ export default function Component01NiduxOne() {
 
                 {/* default state — icon + title at bottom */}
                 <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-between z-10">
-                  <div className="text-white/20 group-hover:text-[#C9F31D]/40 transition-colors">{card.icon}</div>
+                  <div className="text-white/20 group-hover:text-[#efc133]/40 transition-colors">{card.icon}</div>
                   <div>
                   <p className="text-[10px] text-[var(--nx-accent)] uppercase tracking-wider font-semibold">{card.subtitle}</p>
                   <h3 className="text-base md:text-lg font-bold mt-0.5">{card.title}</h3>
@@ -934,7 +934,7 @@ export default function Component01NiduxOne() {
                     {card.desc}
                   </p>
                   <div className="flex justify-between items-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <span className="text-[10px] text-[#C9F31D]/60">NIDUX lo resuelve</span>
+                    <span className="text-[10px] text-[#efc133]/60">NIDUX lo resuelve</span>
                     <div className="w-7 h-7 rounded-full bg-[var(--nx-accent)] flex items-center justify-center">
                       <ArrowRight className="w-3 h-3 text-black" />
                     </div>
@@ -968,12 +968,12 @@ export default function Component01NiduxOne() {
             <div className="lg:w-1/2">
               <span className="text-white/10 text-[120px] md:text-[180px] font-bold leading-none select-none">01</span>
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold -mt-10 md:-mt-14 drop-shadow-lg">
-                NDX <span className="text-[#C9F31D]">POS</span>
+                NDX <span className="text-[#efc133]">POS</span>
               </h3>
               <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed max-w-md drop-shadow">
                 Punto de venta inteligente para su tienda física. Rápido, confiable y conectado con todo su ecosistema.
               </p>
-              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#C9F31D] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
+              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#efc133] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
                 Probar gratis <ArrowRight className="w-4 h-4 text-black" />
               </a>
             </div>
@@ -983,12 +983,12 @@ export default function Component01NiduxOne() {
                 { title: "Facturación electrónica integrada", desc: "Facture al instante, cumpla con Hacienda sin esfuerzo.", icon: <FileText className="w-5 h-5" /> },
                 { title: "Control de inventario en tiempo real", desc: "Sepa qué tiene, qué se vendió y cuándo reponer. Automático.", icon: <Package className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#efc133]/25 transition-all duration-300">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#efc133] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-base text-white group-hover:text-[#C9F31D] transition-colors">{f.title}</h4>
+                    <h4 className="font-semibold text-base text-white group-hover:text-[#efc133] transition-colors">{f.title}</h4>
                     <p className="text-sm text-white/50 mt-1">{f.desc}</p>
                   </div>
                 </div>
@@ -1008,16 +1008,16 @@ export default function Component01NiduxOne() {
             <div className="lg:w-1/2 lg:text-right">
               <span className="text-white/10 text-[120px] md:text-[180px] font-bold leading-none select-none">02</span>
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold -mt-10 md:-mt-14 drop-shadow-lg">
-                NDX <span className="text-[#C9F31D]">Ecommerce</span>
+                NDX <span className="text-[#efc133]">Ecommerce</span>
               </h3>
-              <div className="inline-flex items-center gap-2 mt-2 bg-[#C9F31D]/10 border border-[#C9F31D]/20 rounded-full px-3 py-1">
-                <span className="text-[#C9F31D] text-sm">★</span>
-                <span className="text-[#C9F31D] text-xs font-semibold">Más popular</span>
+              <div className="inline-flex items-center gap-2 mt-2 bg-[#efc133]/10 border border-[#efc133]/20 rounded-full px-3 py-1">
+                <span className="text-[#efc133] text-sm">★</span>
+                <span className="text-[#efc133] text-xs font-semibold">Más popular</span>
               </div>
               <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed max-w-md lg:ml-auto drop-shadow">
                 Su tienda online profesional, lista para vender 24/7 sin complicaciones técnicas. Sincronizada con todo.
               </p>
-              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#C9F31D] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
+              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#efc133] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
                 Probar gratis <ArrowRight className="w-4 h-4 text-black" />
               </a>
             </div>
@@ -1027,12 +1027,12 @@ export default function Component01NiduxOne() {
                 { title: "Sincronización automática de inventario", desc: "Venda online y offline sin descuadres. Stock siempre al día.", icon: <Layers className="w-5 h-5" /> },
                 { title: "Pasarelas de pago integradas", desc: "Acepte pagos nacionales e internacionales sin fricciones.", icon: <CreditCard className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#efc133]/25 transition-all duration-300">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#efc133] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-base text-white group-hover:text-[#C9F31D] transition-colors">{f.title}</h4>
+                    <h4 className="font-semibold text-base text-white group-hover:text-[#efc133] transition-colors">{f.title}</h4>
                     <p className="text-sm text-white/50 mt-1">{f.desc}</p>
                   </div>
                 </div>
@@ -1052,12 +1052,12 @@ export default function Component01NiduxOne() {
             <div className="lg:w-1/2">
               <span className="text-white/10 text-[120px] md:text-[180px] font-bold leading-none select-none">03</span>
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold -mt-10 md:-mt-14 drop-shadow-lg">
-                NDX <span className="text-[#C9F31D]">Connect</span>
+                NDX <span className="text-[#efc133]">Connect</span>
               </h3>
               <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed max-w-md drop-shadow">
                 Venda por WhatsApp con catálogo automático, carrito de compras y seguimiento integrado a su inventario.
               </p>
-              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#C9F31D] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
+              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#efc133] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
                 Probar gratis <ArrowRight className="w-4 h-4 text-black" />
               </a>
             </div>
@@ -1067,12 +1067,12 @@ export default function Component01NiduxOne() {
                 { title: "Carrito de compras conversacional", desc: "El cliente elige, agrega y paga sin salir de la conversación.", icon: <ShoppingCart className="w-5 h-5" /> },
                 { title: "Seguimiento de pedidos en tiempo real", desc: "Tanto usted como su cliente saben el estado de cada pedido.", icon: <Truck className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#efc133]/25 transition-all duration-300">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#efc133] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-base text-white group-hover:text-[#C9F31D] transition-colors">{f.title}</h4>
+                    <h4 className="font-semibold text-base text-white group-hover:text-[#efc133] transition-colors">{f.title}</h4>
                     <p className="text-sm text-white/50 mt-1">{f.desc}</p>
                   </div>
                 </div>
@@ -1090,15 +1090,15 @@ export default function Component01NiduxOne() {
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16">
             <div className="lg:w-1/2 lg:text-right">
-              <span className="text-[#C9F31D]/20 text-[120px] md:text-[180px] font-bold leading-none select-none">04</span>
+              <span className="text-[#efc133]/20 text-[120px] md:text-[180px] font-bold leading-none select-none">04</span>
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold -mt-10 md:-mt-14 drop-shadow-lg">
-                NDX <span className="text-[#C9F31D]">Loyalty</span>
+                NDX <span className="text-[#efc133]">Loyalty</span>
               </h3>
               <p className="text-white/40 text-sm mt-1">(QPONS)</p>
               <p className="mt-4 text-white/60 text-base md:text-lg leading-relaxed max-w-md lg:ml-auto drop-shadow">
                 Fidelice clientes con puntos, cupones y recompensas automáticas. Haga que vuelvan una y otra vez.
               </p>
-              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#C9F31D] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
+              <a href="#agendar" className="mt-6 inline-flex items-center gap-2 bg-[#efc133] text-black font-bold text-sm px-6 py-3 rounded-full hover:brightness-110 transition">
                 Probar gratis <ArrowRight className="w-4 h-4 text-black" />
               </a>
             </div>
@@ -1109,12 +1109,12 @@ export default function Component01NiduxOne() {
                 { title: "Cupones y promociones automáticas", desc: "Envíe ofertas personalizadas sin mover un dedo.", icon: <Zap className="w-5 h-5" /> },
                 { title: "Análisis de comportamiento del cliente", desc: "Sepa quién compra, qué prefiere y cuándo vuelve.", icon: <BarChart3 className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#efc133]/25 transition-all duration-300">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#efc133] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-base text-white group-hover:text-[#C9F31D] transition-colors">{f.title}</h4>
+                    <h4 className="font-semibold text-base text-white group-hover:text-[#efc133] transition-colors">{f.title}</h4>
                     <p className="text-sm text-white/50 mt-1">{f.desc}</p>
                   </div>
                 </div>
@@ -1180,8 +1180,8 @@ export default function Component01NiduxOne() {
               },
             ].map((t, i) => (
               <div key={i} className={`${t.offset}`}>
-                <div className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-6 hover:border-[#C9F31D]/20 transition-all duration-300">
-                  <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-[#C9F31D]/30 mb-4" />
+                <div className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-6 hover:border-[#efc133]/20 transition-all duration-300">
+                  <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-[#efc133]/30 mb-4" />
                   <p className="text-[var(--nx-accent)] text-2xl mb-3">&ldquo;&rdquo;</p>
                   <p className="text-sm md:text-base text-[var(--nx-text-2)] leading-relaxed italic mb-6">
                     {t.quote}
@@ -1208,35 +1208,35 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ PLANS ══════════════ */}
-      <section id="planes" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(201,243,29,0.04) 0%, #0B1120 50%)" }}>
+      <section id="planes" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(239,193,51,0.04) 0%, #0B1120 50%)" }}>
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-12">
             <span className="text-[var(--nx-accent)] text-xs font-semibold tracking-[0.2em] uppercase">PLANES</span>
             <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold">Elija el plan que mejor se adapte</h2>
           </div>
           <div className="flex justify-center mb-10">
-            <div className="inline-flex rounded-full border border-[#C9F31D]/40 p-1">
+            <div className="inline-flex rounded-full border border-[#efc133]/40 p-1">
               <button className="px-6 py-2 rounded-full bg-[var(--nx-accent)] text-black text-sm font-semibold">Mensual</button>
               <button className="px-6 py-2 rounded-full text-[var(--nx-text-3)] text-sm font-medium hover:text-[var(--nx-text)] transition">Anual</button>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <div className="relative border border-white/[0.08] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-card,#131c2e)] hover:border-[#C9F31D]/20 transition-all duration-300">
+            <div className="relative border border-white/[0.08] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-card,#131c2e)] hover:border-[#efc133]/20 transition-all duration-300">
               <h3 className="text-2xl md:text-3xl font-bold">Plus</h3>
               <div className="mt-5 flex items-baseline gap-1"><span className="text-5xl md:text-6xl font-bold text-[var(--nx-accent)]">$29</span><span className="text-[var(--nx-text-4)] text-base ml-1">/mes</span></div>
               <p className="mt-3 text-sm text-[var(--nx-text-3)]">Para negocios que inician en digital</p>
               <a href="#agendar" className="mt-6 flex items-center justify-center border border-[var(--nx-accent)] text-[var(--nx-accent)] font-semibold text-sm py-3.5 rounded-full hover:bg-[var(--nx-accent)] hover:text-black transition-all">Elegir Plan</a>
               <div className="mt-8"><p className="text-xs text-[var(--nx-text-5)] uppercase tracking-wider font-semibold mb-4">Incluye</p><ul className="space-y-3">{["POS + Ecommerce", "1 sucursal", "Facturación electrónica", "Soporte por chat"].map((f, i) => (<li key={i} className="flex items-center gap-3 text-sm text-[var(--nx-text-3)]"><CheckIcon />{f}</li>))}</ul></div>
             </div>
-            <div className="relative border-2 border-[#C9F31D]/40 rounded-2xl p-7 md:p-9 flex flex-col bg-gradient-to-b from-[#1a2a4a] via-[#131c2e] to-[#0e1525] md:-my-6 shadow-[0_0_40px_rgba(201,243,29,0.08)]">
+            <div className="relative border-2 border-[#efc133]/40 rounded-2xl p-7 md:p-9 flex flex-col bg-gradient-to-b from-[#1a2a4a] via-[#131c2e] to-[#0e1525] md:-my-6 shadow-[0_0_40px_rgba(239,193,51,0.08)]">
               <div className="absolute -top-0 -right-0 overflow-hidden w-24 h-24"><div className="absolute top-3 -right-6 rotate-45 bg-[var(--nx-accent)] text-black text-[10px] font-bold py-1 px-8 tracking-wider">Popular</div></div>
               <h3 className="text-3xl md:text-4xl font-bold text-[var(--nx-accent)]">Pro</h3>
               <div className="mt-5 flex items-baseline gap-1"><span className="text-6xl md:text-7xl font-bold text-[var(--nx-text)]">$42</span><span className="text-[var(--nx-text-4)] text-base ml-1">/mes</span></div>
               <p className="mt-3 text-sm text-[var(--nx-text-3)]">Servicio completo para crecer</p>
-              <a href="#agendar" className="mt-6 flex items-center justify-center bg-[var(--nx-accent)] text-black font-bold text-sm py-4 rounded-full hover:brightness-110 transition shadow-[0_0_20px_rgba(201,243,29,0.2)]">Elegir Plan</a>
+              <a href="#agendar" className="mt-6 flex items-center justify-center bg-[var(--nx-accent)] text-black font-bold text-sm py-4 rounded-full hover:brightness-110 transition shadow-[0_0_20px_rgba(239,193,51,0.2)]">Elegir Plan</a>
               <div className="mt-8"><p className="text-xs text-[var(--nx-text-5)] uppercase tracking-wider font-semibold mb-4">Incluye</p><ul className="space-y-3">{["Todo del plan Plus", "POS + Ecommerce + Connect", "Hasta 3 sucursales", "WhatsApp Commerce", "Soporte prioritario", "Reportes avanzados"].map((f, i) => (<li key={i} className="flex items-center gap-3 text-sm text-[var(--nx-text-2)]"><CheckIcon />{f}</li>))}</ul></div>
             </div>
-            <div className="relative border border-white/[0.08] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-card,#131c2e)] hover:border-[#C9F31D]/20 transition-all duration-300">
+            <div className="relative border border-white/[0.08] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-card,#131c2e)] hover:border-[#efc133]/20 transition-all duration-300">
               <h3 className="text-2xl md:text-3xl font-bold">Corporativo</h3>
               <div className="mt-5 flex items-baseline gap-1"><span className="text-5xl md:text-6xl font-bold text-[var(--nx-accent)]">$59</span><span className="text-[var(--nx-text-4)] text-base ml-1">/mes</span></div>
               <p className="mt-3 text-sm text-[var(--nx-text-3)]">Para empresas en expansión</p>
@@ -1255,9 +1255,9 @@ export default function Component01NiduxOne() {
         <div className="relative z-10 w-full">
           <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-[#C9F31D] text-xs font-semibold tracking-[0.2em] uppercase">RESULTADOS</span>
+              <span className="text-[#efc133] text-xs font-semibold tracking-[0.2em] uppercase">RESULTADOS</span>
               <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg">
-                Números que <span className="text-[#C9F31D]">hablan solos</span>
+                Números que <span className="text-[#efc133]">hablan solos</span>
               </h2>
             </div>
           </div>
@@ -1271,8 +1271,8 @@ export default function Component01NiduxOne() {
               { stat: "100%", label: "visibilidad", desc: "dashboards en tiempo real", icon: <Eye className="w-8 h-8" /> },
             ].map((s, i) => (
               <div key={i} className="flex-1 min-w-[200px] max-w-[280px] text-center">
-                <div className="text-[#C9F31D]/40 flex justify-center mb-3">{s.icon}</div>
-                <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#C9F31D] leading-none drop-shadow-[0_0_30px_rgba(201,243,29,0.2)]">{s.stat}</p>
+                <div className="text-[#efc133]/40 flex justify-center mb-3">{s.icon}</div>
+                <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#efc133] leading-none drop-shadow-[0_0_30px_rgba(239,193,51,0.2)]">{s.stat}</p>
                 <p className="text-lg md:text-xl font-bold mt-3 text-white drop-shadow">{s.label}</p>
                 <p className="text-sm text-white/50 mt-1">{s.desc}</p>
               </div>
@@ -1281,9 +1281,9 @@ export default function Component01NiduxOne() {
 
           <div className="flex items-center justify-center gap-6 mt-12">
             <div className="flex items-center gap-3 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
-              <span className="text-[#C9F31D] text-lg">📞</span>
+              <span className="text-[#efc133] text-lg">📞</span>
               <span className="text-white/60 text-sm">¿Necesita ayuda?</span>
-              <a href="tel:+50622223333" className="text-[#C9F31D] font-bold text-base hover:underline">+506 2222-3333</a>
+              <a href="tel:+50622223333" className="text-[#efc133] font-bold text-base hover:underline">+506 2222-3333</a>
             </div>
           </div>
           <div className="max-w-[1320px] mx-auto px-4">
@@ -1295,7 +1295,7 @@ export default function Component01NiduxOne() {
       {/* ══════════════ 10. ECOSISTEMA — Apple style ══════════════ */}
       <section id="alianzas" data-reveal className="relative pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden snap-start shrink-0 min-h-screen bg-[#0a0f1d]">
         {/* ambient glows */}
-        <div className="absolute left-1/4 top-1/4 w-[500px] h-[500px] rounded-full bg-[#C9F31D]/[0.03] blur-[200px] pointer-events-none" />
+        <div className="absolute left-1/4 top-1/4 w-[500px] h-[500px] rounded-full bg-[#efc133]/[0.03] blur-[200px] pointer-events-none" />
         <div className="absolute right-1/4 bottom-1/4 w-[400px] h-[400px] rounded-full bg-teal-500/[0.03] blur-[180px] pointer-events-none" />
 
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1304,7 +1304,7 @@ export default function Component01NiduxOne() {
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1] tracking-tight">
               Conectado con
               <br />
-              <span className="text-[#C9F31D]">todo.</span>
+              <span className="text-[#efc133]">todo.</span>
             </h2>
             <p className="mt-6 text-white/40 text-base md:text-lg max-w-lg mx-auto">
               Más de 30 integraciones. Cero configuración.
@@ -1315,11 +1315,11 @@ export default function Component01NiduxOne() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
 
             {/* Inventario */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Package className="w-4 h-4 text-[#C9F31D]/60" />
+                    <Package className="w-4 h-4 text-[#efc133]/60" />
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Inventario en vivo</span>
                     <span className="ml-auto w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   </div>
@@ -1328,7 +1328,7 @@ export default function Component01NiduxOne() {
                       <div key={i} className="flex items-center gap-3">
                         <div className="flex-1">
                           <div className="flex justify-between text-[11px] mb-1"><span className="text-white/60">{item.name}</span><span className={item.low ? "text-orange-400" : "text-white/30"}>{item.qty} uds</span></div>
-                          <div className="h-1 rounded-full bg-white/[0.06]"><div className={`h-full rounded-full ${item.low ? "bg-orange-400/60" : "bg-[#C9F31D]/40"}`} style={{ width: item.bar }} /></div>
+                          <div className="h-1 rounded-full bg-white/[0.06]"><div className={`h-full rounded-full ${item.low ? "bg-orange-400/60" : "bg-[#efc133]/40"}`} style={{ width: item.bar }} /></div>
                         </div>
                       </div>
                     ))}
@@ -1342,11 +1342,11 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* Tienda Física / POS */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Store className="w-4 h-4 text-[#C9F31D]/60" />
+                    <Store className="w-4 h-4 text-[#efc133]/60" />
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">NDX POS</span>
                   </div>
                   <div className="flex items-end justify-between mb-2">
@@ -1354,7 +1354,7 @@ export default function Component01NiduxOne() {
                     <div className="text-right"><span className="text-xs text-emerald-400 font-medium">+3 items</span></div>
                   </div>
                   <div className="flex gap-2 mt-3">
-                    <div className="flex-1 bg-[#C9F31D] text-black text-[10px] font-bold py-1.5 rounded-lg text-center">Cobrar</div>
+                    <div className="flex-1 bg-[#efc133] text-black text-[10px] font-bold py-1.5 rounded-lg text-center">Cobrar</div>
                     <div className="flex-1 bg-white/[0.06] text-white/50 text-[10px] font-medium py-1.5 rounded-lg text-center">Apartar</div>
                   </div>
                 </div>
@@ -1366,11 +1366,11 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* Ecommerce */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
-                    <ShoppingCart className="w-4 h-4 text-[#C9F31D]/60" />
+                    <ShoppingCart className="w-4 h-4 text-[#efc133]/60" />
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Ecommerce</span>
                     <span className="ml-auto text-[10px] text-emerald-400">Online</span>
                   </div>
@@ -1379,7 +1379,7 @@ export default function Component01NiduxOne() {
                       <div key={i} className="flex-1 bg-white/[0.04] rounded-lg p-2">
                         <div className="aspect-square bg-white/[0.06] rounded-md mb-2 flex items-center justify-center"><ShoppingCart className="w-4 h-4 text-white/10" /></div>
                         <p className="text-[10px] text-white/50 truncate">{p}</p>
-                        <p className="text-[10px] text-[#C9F31D]/70 font-medium">₡12,500</p>
+                        <p className="text-[10px] text-[#efc133]/70 font-medium">₡12,500</p>
                       </div>
                     ))}
                   </div>
@@ -1392,7 +1392,7 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* WhatsApp Commerce — spans 2 cols */}
-            <div className="group lg:col-span-2 bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group lg:col-span-2 bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
@@ -1409,9 +1409,9 @@ export default function Component01NiduxOne() {
                     <div className="flex gap-2 items-end justify-end">
                       <div className="bg-white/[0.08] rounded-2xl rounded-tr-sm px-3 py-2 max-w-[70%]">
                         <p className="text-[11px] text-white/80">¡Sí! Tenemos 24 en stock. Le comparto el enlace de pago:</p>
-                        <div className="mt-1.5 bg-[#C9F31D]/10 border border-[#C9F31D]/20 rounded-lg px-2 py-1.5 flex items-center gap-2">
-                          <CreditCard className="w-3 h-3 text-[#C9F31D]" />
-                          <span className="text-[10px] text-[#C9F31D]">Pagar ₡18,500</span>
+                        <div className="mt-1.5 bg-[#efc133]/10 border border-[#efc133]/20 rounded-lg px-2 py-1.5 flex items-center gap-2">
+                          <CreditCard className="w-3 h-3 text-[#efc133]" />
+                          <span className="text-[10px] text-[#efc133]">Pagar ₡18,500</span>
                         </div>
                         <p className="text-[9px] text-white/30 text-right mt-0.5">10:32 ✓✓</p>
                       </div>
@@ -1426,7 +1426,7 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* Fidelización */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
@@ -1434,7 +1434,7 @@ export default function Component01NiduxOne() {
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">QPONS.VIP</span>
                   </div>
                   <div className="text-center py-1">
-                    <p className="text-3xl font-bold text-[#C9F31D]">1,250</p>
+                    <p className="text-3xl font-bold text-[#efc133]">1,250</p>
                     <p className="text-[10px] text-white/30 mt-0.5">puntos acumulados</p>
                     <div className="mt-2 flex gap-1.5 justify-center">
                       {["☕ Café gratis", "🎁 15% OFF"].map((r, i) => (
@@ -1451,16 +1451,16 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* Pagos */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
-                    <CreditCard className="w-4 h-4 text-[#C9F31D]/60" />
+                    <CreditCard className="w-4 h-4 text-[#efc133]/60" />
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Pasarelas</span>
                   </div>
                   <div className="grid grid-cols-3 gap-2">
                     {["BAC", "BCR", "PayPal", "Tilopay", "LAFISE", "+5"].map((p, i) => (
-                      <div key={i} className={`flex items-center justify-center py-2 rounded-lg text-[11px] font-medium ${i === 5 ? "bg-[#C9F31D]/10 text-[#C9F31D]" : "bg-white/[0.04] text-white/40"}`}>
+                      <div key={i} className={`flex items-center justify-center py-2 rounded-lg text-[11px] font-medium ${i === 5 ? "bg-[#efc133]/10 text-[#efc133]" : "bg-white/[0.04] text-white/40"}`}>
                         {p}
                       </div>
                     ))}
@@ -1474,11 +1474,11 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* Logística */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Truck className="w-4 h-4 text-[#C9F31D]/60" />
+                    <Truck className="w-4 h-4 text-[#efc133]/60" />
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Envíos</span>
                   </div>
                   <div className="space-y-2">
@@ -1500,16 +1500,16 @@ export default function Component01NiduxOne() {
             </div>
 
             {/* Analytics */}
-            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#efc133]/20 transition-all duration-300 cursor-default">
               <div className="p-4 pb-0">
                 <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
                   <div className="flex items-center gap-2 mb-3">
-                    <BarChart3 className="w-4 h-4 text-[#C9F31D]/60" />
+                    <BarChart3 className="w-4 h-4 text-[#efc133]/60" />
                     <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Dashboard</span>
                   </div>
                   <div className="flex items-end gap-1 h-16 px-1">
                     {[35, 52, 40, 68, 45, 72, 58, 80, 65, 90, 75, 85].map((h, i) => (
-                      <div key={i} className="flex-1 rounded-sm bg-[#C9F31D]/30 group-hover:bg-[#C9F31D]/50 transition-colors" style={{ height: `${h}%` }} />
+                      <div key={i} className="flex-1 rounded-sm bg-[#efc133]/30 group-hover:bg-[#efc133]/50 transition-colors" style={{ height: `${h}%` }} />
                     ))}
                   </div>
                   <div className="flex justify-between mt-2"><span className="text-[9px] text-white/20">Ene</span><span className="text-[9px] text-white/20">Dic</span></div>
@@ -1536,12 +1536,12 @@ export default function Component01NiduxOne() {
             ].map((cat, i) => (
               <div key={i} className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-[#C9F31D]">{cat.icon}</span>
+                  <span className="text-[#efc133]">{cat.icon}</span>
                   <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider">{cat.label}</h3>
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-2">
                   {cat.partners.map((p) => (
-                    <span key={p} className="text-sm text-white/40 hover:text-[#C9F31D] transition-colors cursor-default">{p}</span>
+                    <span key={p} className="text-sm text-white/40 hover:text-[#efc133] transition-colors cursor-default">{p}</span>
                   ))}
                 </div>
               </div>
@@ -1550,7 +1550,7 @@ export default function Component01NiduxOne() {
 
           <div className="mt-16 text-center">
             <p className="text-white/20 text-sm mb-4">¿No ve su integración? Probablemente ya la tenemos.</p>
-            <a href="#contacto" className="inline-flex items-center gap-2 border border-white/10 text-white/60 text-sm px-6 py-3 rounded-full hover:border-[#C9F31D]/30 hover:text-white transition-all">
+            <a href="#contacto" className="inline-flex items-center gap-2 border border-white/10 text-white/60 text-sm px-6 py-3 rounded-full hover:border-[#efc133]/30 hover:text-white transition-all">
               Consultar integraciones
             </a>
           </div>
@@ -1586,7 +1586,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 11. CONTACT — premium redesign ══════════════ */}
-      <section id="contacto" data-reveal="scale" className="relative py-16 md:py-20 snap-start shrink-0 min-h-screen flex items-center overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(201,243,29,0.04) 0%, #0B1120 60%)" }}>
+      <section id="contacto" data-reveal="scale" className="relative py-16 md:py-20 snap-start shrink-0 min-h-screen flex items-center overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(239,193,51,0.04) 0%, #0B1120 60%)" }}>
         <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* centered header */}
           <div className="text-center mb-10">
@@ -1608,14 +1608,14 @@ export default function Component01NiduxOne() {
                     <User className="w-4 h-4 text-[var(--nx-accent)]" />
                     Nombre completo <span className="text-[var(--nx-accent)]">*</span>
                   </label>
-                  <input type="text" required className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#C9F31D]/50 focus:outline-none transition" placeholder="Su nombre" />
+                  <input type="text" required className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#efc133]/50 focus:outline-none transition" placeholder="Su nombre" />
                 </div>
                 <div>
                   <label className="flex items-center gap-2 text-sm text-[var(--nx-text-3)] mb-2">
                     <Mail className="w-4 h-4 text-[var(--nx-accent)]" />
                     Correo electrónico <span className="text-[var(--nx-accent)]">*</span>
                   </label>
-                  <input type="email" required className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#C9F31D]/50 focus:outline-none transition" placeholder="correo@ejemplo.com" />
+                  <input type="email" required className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#efc133]/50 focus:outline-none transition" placeholder="correo@ejemplo.com" />
                 </div>
               </div>
 
@@ -1625,18 +1625,18 @@ export default function Component01NiduxOne() {
                     <Phone className="w-4 h-4 text-[var(--nx-accent)]" />
                     Teléfono
                   </label>
-                  <input type="tel" className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#C9F31D]/50 focus:outline-none transition" placeholder="+506 8888-8888" />
+                  <input type="tel" className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#efc133]/50 focus:outline-none transition" placeholder="+506 8888-8888" />
                 </div>
                 <div>
                   <label className="flex items-center gap-2 text-sm text-[var(--nx-text-3)] mb-2">
                     <Building2 className="w-4 h-4 text-[var(--nx-accent)]" />
                     Sucursales
                   </label>
-                  <input type="text" className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#C9F31D]/50 focus:outline-none transition" placeholder="Ej: 2 en San José" />
+                  <input type="text" className="w-full bg-transparent border border-[var(--nx-border)] rounded-xl px-4 py-3.5 text-[var(--nx-text)] placeholder:text-[var(--nx-text-5)] focus:border-[#efc133]/50 focus:outline-none transition" placeholder="Ej: 2 en San José" />
                 </div>
               </div>
 
-              <button type="submit" className="mt-3 flex items-center justify-center gap-3 bg-[var(--nx-accent)] text-black font-bold text-base py-4 rounded-full hover:brightness-110 transition w-full shadow-[0_0_30px_rgba(201,243,29,0.15)]">
+              <button type="submit" className="mt-3 flex items-center justify-center gap-3 bg-[var(--nx-accent)] text-black font-bold text-base py-4 rounded-full hover:brightness-110 transition w-full shadow-[0_0_30px_rgba(239,193,51,0.15)]">
                 <Send className="w-5 h-5" />
                 AGENDAR MI DEMO GRATIS
               </button>
@@ -1674,7 +1674,7 @@ export default function Component01NiduxOne() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#agendar"
-              className="inline-flex items-center justify-center gap-3 bg-[var(--nx-accent)] text-black font-bold text-base px-10 py-4 rounded-full hover:brightness-110 transition shadow-[0_0_30px_rgba(201,243,29,0.2)]"
+              className="inline-flex items-center justify-center gap-3 bg-[var(--nx-accent)] text-black font-bold text-base px-10 py-4 rounded-full hover:brightness-110 transition shadow-[0_0_30px_rgba(239,193,51,0.2)]"
             >
               Empezar gratis
             </a>
@@ -1723,7 +1723,7 @@ export default function Component01NiduxOne() {
               ].map((cat, i) => (
                 <div
                   key={i}
-                  className={`shrink-0 w-[260px] md:w-[300px] group relative rounded-2xl border border-[var(--nx-border)] bg-gradient-to-b ${cat.glow} to-[var(--nx-bg)] p-6 md:p-7 flex flex-col justify-between min-h-[320px] md:min-h-[360px] hover:border-[#C9F31D]/30 hover:shadow-[0_0_30px_rgba(201,243,29,0.06)] transition-all duration-500 cursor-pointer`}
+                  className={`shrink-0 w-[260px] md:w-[300px] group relative rounded-2xl border border-[var(--nx-border)] bg-gradient-to-b ${cat.glow} to-[var(--nx-bg)] p-6 md:p-7 flex flex-col justify-between min-h-[320px] md:min-h-[360px] hover:border-[#efc133]/30 hover:shadow-[0_0_30px_rgba(239,193,51,0.06)] transition-all duration-500 cursor-pointer`}
                 >
                   {/* icon */}
                   <div className="text-6xl md:text-7xl mb-4 group-hover:scale-110 transition-transform duration-500">
@@ -1737,7 +1737,7 @@ export default function Component01NiduxOne() {
                   </div>
 
                   {/* hover arrow */}
-                  <div className="absolute top-5 right-5 w-8 h-8 rounded-full border border-[var(--nx-border)] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:border-[#C9F31D]/40 transition-all">
+                  <div className="absolute top-5 right-5 w-8 h-8 rounded-full border border-[var(--nx-border)] flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:border-[#efc133]/40 transition-all">
                     <ArrowRight className="w-3.5 h-3.5 text-[var(--nx-accent)]" />
                   </div>
                 </div>
@@ -1792,7 +1792,7 @@ export default function Component01NiduxOne() {
             </p>
             <a
               href="#agendar"
-              className="mt-8 inline-flex items-center gap-3 bg-[#C9F31D] text-black font-bold text-base px-8 py-4 rounded-full hover:brightness-110 transition"
+              className="mt-8 inline-flex items-center gap-3 bg-[#efc133] text-black font-bold text-base px-8 py-4 rounded-full hover:brightness-110 transition"
             >
               AGENDAR DEMO
               <ArrowRight className="w-5 h-5 text-black" />
@@ -1804,7 +1804,7 @@ export default function Component01NiduxOne() {
                 <a
                   key={social}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-[#C9F31D] hover:border-[#C9F31D]/30 transition"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-[#efc133] hover:border-[#efc133]/30 transition"
                   aria-label={social}
                 >
                   {social === "facebook" && (
@@ -1880,11 +1880,11 @@ export default function Component01NiduxOne() {
                 <input
                   type="email"
                   placeholder="correo@ejemplo.com"
-                  className="flex-1 min-w-0 bg-white/[0.04] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-white/20 focus:border-[#C9F31D]/50 focus:outline-none transition"
+                  className="flex-1 min-w-0 bg-white/[0.04] border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-white/20 focus:border-[#efc133]/50 focus:outline-none transition"
                 />
                 <button
                   type="submit"
-                  className="bg-[#C9F31D] text-black font-semibold text-sm px-4 py-2.5 rounded-xl hover:brightness-110 transition shrink-0"
+                  className="bg-[#efc133] text-black font-semibold text-sm px-4 py-2.5 rounded-xl hover:brightness-110 transition shrink-0"
                 >
                   Suscribirse
                 </button>
@@ -1949,7 +1949,7 @@ export default function Component01NiduxOne() {
         }
         [data-hover-lift]:hover {
           transform: translateY(-6px);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(201,243,29,0.05);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(239,193,51,0.05);
         }
 
         /* ── glow pulse for accent elements ── */

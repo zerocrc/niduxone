@@ -24,11 +24,11 @@
   --nx-border: rgba(255, 255, 255, 0.1);
   --nx-border-subtle: rgba(255, 255, 255, 0.05);
 
-  --nx-accent: #C9F31D;
-  --nx-accent-dark: #a8cc0e;
-  --nx-accent-glow: rgba(201, 243, 29, 0.2);
-  --nx-accent-bg: rgba(201, 243, 29, 0.1);
-  --nx-accent-text: #C9F31D;
+  --nx-accent: #efc133;
+  --nx-accent-dark: #d4a82a;
+  --nx-accent-glow: rgba(239, 193, 51, 0.2);
+  --nx-accent-bg: rgba(239, 193, 51, 0.1);
+  --nx-accent-text: #efc133;
 
   --nx-input-bg: rgba(255, 255, 255, 0.04);
   --nx-input-border: rgba(255, 255, 255, 0.1);
