@@ -400,7 +400,7 @@ function HeroSlider() {
 
         {/* top headline */}
         <div className="absolute top-12 md:top-16 left-0 right-0 z-[1] pointer-events-none text-center px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)] opacity-60">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.9)]">
             Comercio <span className="text-[#C9F31D]">unificado</span>
           </h1>
         </div>
