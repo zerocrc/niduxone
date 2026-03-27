@@ -1311,27 +1311,216 @@ export default function Component01NiduxOne() {
             </p>
           </div>
 
-          {/* ecosystem grid — 4 columns, Lucide icons, minimal */}
-          {/* Bento grid */}
+          {/* Bento grid — cards with simulated UI previews */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
-            {[
-              { icon: <Package className="w-7 h-7" />, label: "Inventario", desc: "Sincronizado en tiempo real entre tienda física y online. Cero descuadres.", span: "lg:col-span-1" },
-              { icon: <Store className="w-7 h-7" />, label: "Tienda Física", desc: "POS conectado al ecosistema completo. Cada venta se registra al instante.", span: "lg:col-span-1" },
-              { icon: <ShoppingCart className="w-7 h-7" />, label: "Ecommerce", desc: "Su tienda online profesional funcionando 24/7 con catálogo sincronizado.", span: "lg:col-span-1" },
-              { icon: <MessageCircle className="w-7 h-7" />, label: "WhatsApp Commerce", desc: "Ventas conversacionales automatizadas. Sus clientes compran sin salir del chat.", span: "lg:col-span-2" },
-              { icon: <Heart className="w-7 h-7" />, label: "Fidelización", desc: "QPONS: puntos, cupones y recompensas que hacen que sus clientes vuelvan.", span: "lg:col-span-1" },
-              { icon: <CreditCard className="w-7 h-7" />, label: "Pagos", desc: "10+ pasarelas integradas. BAC, BCR, PayPal, Tilopay y más.", span: "lg:col-span-1" },
-              { icon: <Truck className="w-7 h-7" />, label: "Logística", desc: "Envíos automatizados con Correos de CR, Moovin y más.", span: "lg:col-span-1" },
-              { icon: <BarChart3 className="w-7 h-7" />, label: "Analytics", desc: "Dashboards en tiempo real. Vea qué vende, qué no, y por qué.", span: "lg:col-span-1" },
-            ].map((m, i) => (
-              <div key={i} className={`group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-7 md:p-8 hover:border-[#C9F31D]/20 hover:bg-[var(--nx-card-hover,#182438)] transition-all duration-300 cursor-default ${m.span}`}>
-                <div className="text-[#C9F31D]/60 group-hover:text-[#C9F31D] transition-colors duration-300 mb-4">
-                  {m.icon}
+
+            {/* Inventario */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Package className="w-4 h-4 text-[#C9F31D]/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Inventario en vivo</span>
+                    <span className="ml-auto w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  </div>
+                  <div className="space-y-2">
+                    {[{ name: "Camisa Oxford M", qty: 24, bar: "60%" }, { name: "Jean Slim Fit 32", qty: 8, bar: "25%", low: true }, { name: "Zapatillas Runner", qty: 45, bar: "85%" }].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="flex-1">
+                          <div className="flex justify-between text-[11px] mb-1"><span className="text-white/60">{item.name}</span><span className={item.low ? "text-orange-400" : "text-white/30"}>{item.qty} uds</span></div>
+                          <div className="h-1 rounded-full bg-white/[0.06]"><div className={`h-full rounded-full ${item.low ? "bg-orange-400/60" : "bg-[#C9F31D]/40"}`} style={{ width: item.bar }} /></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h4 className="text-base font-semibold text-white group-hover:text-white transition-colors">{m.label}</h4>
-                <p className="text-sm text-white/40 mt-2 leading-relaxed group-hover:text-white/60 transition-colors">{m.desc}</p>
               </div>
-            ))}
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Inventario sincronizado</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">En tiempo real entre tienda física y online. Cero descuadres.</p>
+              </div>
+            </div>
+
+            {/* Tienda Física / POS */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Store className="w-4 h-4 text-[#C9F31D]/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">NDX POS</span>
+                  </div>
+                  <div className="flex items-end justify-between mb-2">
+                    <div><span className="text-2xl font-bold text-white">₡42,500</span><p className="text-[10px] text-white/30 mt-0.5">Venta actual</p></div>
+                    <div className="text-right"><span className="text-xs text-emerald-400 font-medium">+3 items</span></div>
+                  </div>
+                  <div className="flex gap-2 mt-3">
+                    <div className="flex-1 bg-[#C9F31D] text-black text-[10px] font-bold py-1.5 rounded-lg text-center">Cobrar</div>
+                    <div className="flex-1 bg-white/[0.06] text-white/50 text-[10px] font-medium py-1.5 rounded-lg text-center">Apartar</div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Punto de venta</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">POS conectado al ecosistema. Cada venta se registra al instante.</p>
+              </div>
+            </div>
+
+            {/* Ecommerce */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <ShoppingCart className="w-4 h-4 text-[#C9F31D]/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Ecommerce</span>
+                    <span className="ml-auto text-[10px] text-emerald-400">Online</span>
+                  </div>
+                  <div className="flex gap-2">
+                    {["Producto A", "Producto B"].map((p, i) => (
+                      <div key={i} className="flex-1 bg-white/[0.04] rounded-lg p-2">
+                        <div className="aspect-square bg-white/[0.06] rounded-md mb-2 flex items-center justify-center"><ShoppingCart className="w-4 h-4 text-white/10" /></div>
+                        <p className="text-[10px] text-white/50 truncate">{p}</p>
+                        <p className="text-[10px] text-[#C9F31D]/70 font-medium">₡12,500</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Ecommerce 24/7</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">Su tienda online profesional con catálogo sincronizado.</p>
+              </div>
+            </div>
+
+            {/* WhatsApp Commerce — spans 2 cols */}
+            <div className="group lg:col-span-2 bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <MessageCircle className="w-4 h-4 text-emerald-400/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">WhatsApp Commerce</span>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex gap-2 items-end">
+                      <div className="bg-[#005c4b] rounded-2xl rounded-tl-sm px-3 py-2 max-w-[70%]">
+                        <p className="text-[11px] text-white/90">Hola! Me interesa la Camisa Oxford. ¿Tienen en talla M?</p>
+                        <p className="text-[9px] text-white/30 text-right mt-0.5">10:32</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-2 items-end justify-end">
+                      <div className="bg-white/[0.08] rounded-2xl rounded-tr-sm px-3 py-2 max-w-[70%]">
+                        <p className="text-[11px] text-white/80">¡Sí! Tenemos 24 en stock. Le comparto el enlace de pago:</p>
+                        <div className="mt-1.5 bg-[#C9F31D]/10 border border-[#C9F31D]/20 rounded-lg px-2 py-1.5 flex items-center gap-2">
+                          <CreditCard className="w-3 h-3 text-[#C9F31D]" />
+                          <span className="text-[10px] text-[#C9F31D]">Pagar ₡18,500</span>
+                        </div>
+                        <p className="text-[9px] text-white/30 text-right mt-0.5">10:32 ✓✓</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">WhatsApp Commerce</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">Ventas conversacionales automatizadas. Sus clientes compran sin salir del chat.</p>
+              </div>
+            </div>
+
+            {/* Fidelización */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Heart className="w-4 h-4 text-pink-400/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">QPONS.VIP</span>
+                  </div>
+                  <div className="text-center py-1">
+                    <p className="text-3xl font-bold text-[#C9F31D]">1,250</p>
+                    <p className="text-[10px] text-white/30 mt-0.5">puntos acumulados</p>
+                    <div className="mt-2 flex gap-1.5 justify-center">
+                      {["☕ Café gratis", "🎁 15% OFF"].map((r, i) => (
+                        <span key={i} className="text-[9px] bg-white/[0.06] px-2 py-1 rounded-full text-white/50">{r}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Fidelización</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">Puntos, cupones y recompensas que hacen que sus clientes vuelvan.</p>
+              </div>
+            </div>
+
+            {/* Pagos */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <CreditCard className="w-4 h-4 text-[#C9F31D]/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Pasarelas</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2">
+                    {["BAC", "BCR", "PayPal", "Tilopay", "LAFISE", "+5"].map((p, i) => (
+                      <div key={i} className={`flex items-center justify-center py-2 rounded-lg text-[11px] font-medium ${i === 5 ? "bg-[#C9F31D]/10 text-[#C9F31D]" : "bg-white/[0.04] text-white/40"}`}>
+                        {p}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Pagos integrados</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">10+ pasarelas. BAC, BCR, PayPal, Tilopay y más.</p>
+              </div>
+            </div>
+
+            {/* Logística */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Truck className="w-4 h-4 text-[#C9F31D]/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Envíos</span>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-3 bg-white/[0.03] rounded-lg p-2">
+                      <div className="w-7 h-7 rounded-full bg-emerald-400/10 flex items-center justify-center"><span className="text-emerald-400 text-xs">✓</span></div>
+                      <div className="flex-1"><p className="text-[11px] text-white/60">Pedido #1847</p><p className="text-[9px] text-emerald-400">Entregado</p></div>
+                    </div>
+                    <div className="flex items-center gap-3 bg-white/[0.03] rounded-lg p-2">
+                      <div className="w-7 h-7 rounded-full bg-blue-400/10 flex items-center justify-center"><Truck className="w-3 h-3 text-blue-400" /></div>
+                      <div className="flex-1"><p className="text-[11px] text-white/60">Pedido #1848</p><p className="text-[9px] text-blue-400">En camino</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Logística</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">Envíos automatizados con Correos de CR, Moovin y más.</p>
+              </div>
+            </div>
+
+            {/* Analytics */}
+            <div className="group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-[#C9F31D]/20 transition-all duration-300 cursor-default">
+              <div className="p-4 pb-0">
+                <div className="bg-[#0a0f1d] rounded-xl p-4 border border-white/[0.04]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <BarChart3 className="w-4 h-4 text-[#C9F31D]/60" />
+                    <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Dashboard</span>
+                  </div>
+                  <div className="flex items-end gap-1 h-16 px-1">
+                    {[35, 52, 40, 68, 45, 72, 58, 80, 65, 90, 75, 85].map((h, i) => (
+                      <div key={i} className="flex-1 rounded-sm bg-[#C9F31D]/30 group-hover:bg-[#C9F31D]/50 transition-colors" style={{ height: `${h}%` }} />
+                    ))}
+                  </div>
+                  <div className="flex justify-between mt-2"><span className="text-[9px] text-white/20">Ene</span><span className="text-[9px] text-white/20">Dic</span></div>
+                </div>
+              </div>
+              <div className="p-5 pt-4">
+                <h4 className="text-base font-semibold text-white">Analytics en tiempo real</h4>
+                <p className="text-sm text-white/40 mt-1 leading-relaxed">Vea qué vende, qué no, y por qué. Dashboards en vivo.</p>
+              </div>
+            </div>
+
           </div>
 
           {/* partners — clean horizontal layout */}
