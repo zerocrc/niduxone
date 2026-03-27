@@ -174,7 +174,7 @@ function ProductsIntro() {
   }, []);
 
   return (
-    <section id="productos" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-black">
+    <section id="productos" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-[#0B1120]">
       {/* rotating background images — full cover, visible */}
       {bgImages.map((src, i) => (
         <img
@@ -333,7 +333,7 @@ function ProductBadge3D({
           className={`w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-full backdrop-blur-2xl border-2 flex flex-col items-center justify-center text-center transition-all duration-300 cursor-pointer ${
             isHovered
               ? "bg-[#C9F31D]/25 border-[#C9F31D] shadow-[0_0_60px_rgba(201,243,29,0.35),0_0_120px_rgba(201,243,29,0.1)]"
-              : "bg-[#0a0a0a]/70 border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:border-[#C9F31D]/40"
+              : "bg-[#0B1120]/70 border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:border-[#C9F31D]/40"
           }`}
         >
           <p className={`text-xs md:text-sm lg:text-base font-bold leading-tight transition-colors duration-300 ${isHovered ? "text-[#C9F31D]" : "text-white"}`}>
@@ -355,9 +355,9 @@ function ProductBadge3D({
             transform: popupStyle.placeBelow ? "translate(-50%, 0)" : "translate(-50%, -100%)",
           }}
         >
-          <div className="relative backdrop-blur-2xl bg-[#0a0a0a]/95 border border-[#C9F31D]/25 rounded-2xl p-5 shadow-[0_24px_64px_rgba(0,0,0,0.7),0_0_40px_rgba(201,243,29,0.1)]">
+          <div className="relative backdrop-blur-2xl bg-[#0B1120]/95 border border-[#C9F31D]/25 rounded-2xl p-5 shadow-[0_24px_64px_rgba(0,0,0,0.7),0_0_40px_rgba(201,243,29,0.1)]">
             {/* arrow — points up or down depending on placement */}
-            <div className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-[#0a0a0a]/95 border-[#C9F31D]/25 ${
+            <div className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-[#0B1120]/95 border-[#C9F31D]/25 ${
               popupStyle.placeBelow
                 ? "-top-2 border-l border-t"
                 : "-bottom-2 border-r border-b"
@@ -369,7 +369,7 @@ function ProductBadge3D({
                 <li key={fi} className="flex items-center gap-2.5 text-sm text-white/80">
                   <svg className="w-4 h-4 shrink-0 text-[#C9F31D]" viewBox="0 0 20 20" fill="none">
                     <circle cx="10" cy="10" r="10" fill="currentColor" />
-                    <path d="M6 10.5l2.5 2.5L14 8" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M6 10.5l2.5 2.5L14 8" stroke="#0B1120" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   {f}
                 </li>
@@ -389,7 +389,7 @@ function HeroSlider() {
   return (
     <>
       {/* ═══ SCREEN 1: Logo + orbiting products — immersive, no menu ═══ */}
-      <section id="inicio" className="relative h-screen overflow-hidden bg-[#050508] snap-start shrink-0">
+      <section id="inicio" className="relative h-screen overflow-hidden bg-[#0a0f1d] snap-start shrink-0">
         {/* 3D neural network background */}
         <div className="absolute inset-0 z-0">
           <NeuralNetworkCanvas />
@@ -735,7 +735,7 @@ export default function Component01NiduxOne() {
 {/* logos moved inside About Us section */}
 
       {/* ══════════════ ABOUT US / QUIÉNES SOMOS ══════════════ */}
-      <section id="about" data-reveal className="relative py-10 md:py-14 overflow-hidden snap-start shrink-0" style={{ background: "linear-gradient(135deg, #0d1117 0%, #0a0a0a 40%, #0f1210 100%)" }}>
+      <section id="about" data-reveal className="relative py-10 md:py-14 overflow-hidden snap-start shrink-0" style={{ background: "linear-gradient(135deg, #0e1525 0%, #0B1120 40%, #0e1525 100%)" }}>
 {/* background removed */}
         <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* top row: heading left + intro text right */}
@@ -775,19 +775,19 @@ export default function Component01NiduxOne() {
                 </a>
               </div>
 
-              <div data-fade data-delay="1" data-hover-lift className="rounded-2xl border border-[var(--nx-border)] bg-[var(--nx-surface)] p-6 flex flex-col justify-center">
+              <div data-fade data-delay="1" data-hover-lift className="rounded-2xl border border-white/[0.08] bg-[var(--nx-card,#131c2e)] p-6 flex flex-col justify-center">
                 <Trophy className="w-8 h-8 text-[var(--nx-accent)] mb-3 opacity-60" />
                 <p data-counter="13" data-counter-suffix="+" className="text-[var(--nx-accent)] text-5xl font-bold">0</p>
                 <p className="text-[var(--nx-text-4)] text-sm mt-1">Años liderando el eCommerce</p>
               </div>
 
-              <div data-fade data-delay="2" data-hover-lift className="rounded-2xl border border-[var(--nx-border)] bg-[var(--nx-surface)] p-6 flex flex-col justify-center">
+              <div data-fade data-delay="2" data-hover-lift className="rounded-2xl border border-white/[0.08] bg-[var(--nx-card,#131c2e)] p-6 flex flex-col justify-center">
                 <ShoppingBag className="w-8 h-8 text-[var(--nx-accent)] mb-3 opacity-60" />
                 <p data-counter="1800" data-counter-suffix="+" className="text-[var(--nx-accent)] text-5xl font-bold">0</p>
                 <p className="text-[var(--nx-text-4)] text-sm mt-1">Tiendas creadas</p>
               </div>
 
-              <div data-fade data-delay="3" data-hover-lift className="rounded-2xl border border-[#C9F31D]/15 bg-[#C9F31D]/[0.04] p-6 flex flex-col justify-center">
+              <div data-fade data-delay="3" data-hover-lift className="rounded-2xl border border-[#C9F31D]/15 bg-[var(--nx-card,#131c2e)] p-6 flex flex-col justify-center">
                 <MapPin className="w-8 h-8 text-[var(--nx-accent)] mb-3 opacity-60" />
                 <p data-counter="6" data-counter-suffix="+" className="text-[var(--nx-accent)] text-5xl font-bold">0</p>
                 <p className="text-[var(--nx-text-4)] text-sm mt-1">Países en la región</p>
@@ -863,7 +863,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 4. EL PROBLEMA — bento grid with hover reveal ══════════════ */}
-      <section id="el-problema" data-reveal className="relative py-10 md:py-14 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(180deg, #0a0c0a 0%, #0d0a10 50%, #0a0a0a 100%)" }}>
+      <section id="el-problema" data-reveal className="relative py-10 md:py-14 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(180deg, #0a1020 0%, #0d1228 50%, #0B1120 100%)" }}>
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-8 md:mb-10">
             <span className="text-[var(--nx-accent)] text-xs font-semibold tracking-[0.2em] uppercase">EL PROBLEMA</span>
@@ -916,7 +916,7 @@ export default function Component01NiduxOne() {
             ].map((card, i) => (
               <div
                 key={i}
-                className={`group relative rounded-2xl border border-[var(--nx-border)] overflow-hidden cursor-pointer transition-all duration-500 hover:border-[#C9F31D]/40 hover:shadow-[0_0_30px_rgba(201,243,29,0.08)] ${card.span}`}
+                className={`group relative rounded-2xl border border-white/[0.08] overflow-hidden cursor-pointer transition-all duration-300 hover:border-[#C9F31D]/30 hover:shadow-[0_0_30px_rgba(201,243,29,0.06)] ${card.span}`}
               >
                 {/* background image */}
                 <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -960,7 +960,7 @@ export default function Component01NiduxOne() {
       <ProductsIntro />
 
       {/* ══════════════ NDX POS ══════════════ */}
-      <section id="ndx-pos" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-black">
+      <section id="ndx-pos" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-[#0B1120]">
         <img src={imgProdPos} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 relative z-10">
@@ -983,7 +983,7 @@ export default function Component01NiduxOne() {
                 { title: "Facturación electrónica integrada", desc: "Facture al instante, cumpla con Hacienda sin esfuerzo.", icon: <FileText className="w-5 h-5" /> },
                 { title: "Control de inventario en tiempo real", desc: "Sepa qué tiene, qué se vendió y cuándo reponer. Automático.", icon: <Package className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-xl bg-black/60 backdrop-blur-sm border border-white/10 hover:border-[#C9F31D]/30 transition-all">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
@@ -1000,7 +1000,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ NDX ECOMMERCE ══════════════ */}
-      <section id="ndx-ecommerce" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-black">
+      <section id="ndx-ecommerce" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-[#0B1120]">
         <img src={imgProdEcommerce} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 relative z-10">
@@ -1027,7 +1027,7 @@ export default function Component01NiduxOne() {
                 { title: "Sincronización automática de inventario", desc: "Venda online y offline sin descuadres. Stock siempre al día.", icon: <Layers className="w-5 h-5" /> },
                 { title: "Pasarelas de pago integradas", desc: "Acepte pagos nacionales e internacionales sin fricciones.", icon: <CreditCard className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-xl bg-black/60 backdrop-blur-sm border border-white/10 hover:border-[#C9F31D]/30 transition-all">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
@@ -1044,7 +1044,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ NDX CONNECT ══════════════ */}
-      <section id="ndx-connect" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-black">
+      <section id="ndx-connect" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-[#0B1120]">
         <img src={imgProdConnect} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 relative z-10">
@@ -1067,7 +1067,7 @@ export default function Component01NiduxOne() {
                 { title: "Carrito de compras conversacional", desc: "El cliente elige, agrega y paga sin salir de la conversación.", icon: <ShoppingCart className="w-5 h-5" /> },
                 { title: "Seguimiento de pedidos en tiempo real", desc: "Tanto usted como su cliente saben el estado de cada pedido.", icon: <Truck className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-xl bg-black/60 backdrop-blur-sm border border-white/10 hover:border-[#C9F31D]/30 transition-all">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
@@ -1084,7 +1084,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ NDX LOYALTY ══════════════ */}
-      <section id="ndx-loyalty" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-black">
+      <section id="ndx-loyalty" data-reveal className="relative snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-[#0B1120]">
         <img src={imgProdLoyalty} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
@@ -1109,7 +1109,7 @@ export default function Component01NiduxOne() {
                 { title: "Cupones y promociones automáticas", desc: "Envíe ofertas personalizadas sin mover un dedo.", icon: <Zap className="w-5 h-5" /> },
                 { title: "Análisis de comportamiento del cliente", desc: "Sepa quién compra, qué prefiere y cuándo vuelve.", icon: <BarChart3 className="w-5 h-5" /> },
               ].map((f, i) => (
-                <div key={i} className="group flex gap-4 p-5 rounded-xl bg-black/60 backdrop-blur-sm border border-white/10 hover:border-[#C9F31D]/30 transition-all">
+                <div key={i} className="group flex gap-4 p-5 rounded-2xl bg-[#131c2e]/80 backdrop-blur-sm border border-white/[0.08] hover:border-[#C9F31D]/25 transition-all duration-300">
                   <div className="shrink-0 w-10 h-10 rounded-full bg-[#C9F31D] flex items-center justify-center text-black">
                     {f.icon}
                   </div>
@@ -1129,7 +1129,7 @@ export default function Component01NiduxOne() {
       <WhyNiduxSection />
 
       {/* ══════════════ 7. TESTIMONIALS — staggered cards ══════════════ */}
-      <section id="testimonios" data-reveal="scale" className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #0a0d12 0%, #0a0a0a 50%, #100a0d 100%)" }}>
+      <section id="testimonios" data-reveal="scale" className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #0a1020 0%, #0B1120 50%, #10132a 100%)" }}>
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* header row */}
           <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-12">
@@ -1180,7 +1180,7 @@ export default function Component01NiduxOne() {
               },
             ].map((t, i) => (
               <div key={i} className={`${t.offset}`}>
-                <div className="border-t-2 border-[var(--nx-accent)] pt-6">
+                <div className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-6 hover:border-[#C9F31D]/20 transition-all duration-300">
                   <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-[#C9F31D]/30 mb-4" />
                   <p className="text-[var(--nx-accent)] text-2xl mb-3">&ldquo;&rdquo;</p>
                   <p className="text-sm md:text-base text-[var(--nx-text-2)] leading-relaxed italic mb-6">
@@ -1208,7 +1208,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ PLANS ══════════════ */}
-      <section id="planes" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(201,243,29,0.04) 0%, #0a0a0a 50%)" }}>
+      <section id="planes" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center" style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(201,243,29,0.04) 0%, #0B1120 50%)" }}>
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-12">
             <span className="text-[var(--nx-accent)] text-xs font-semibold tracking-[0.2em] uppercase">PLANES</span>
@@ -1220,15 +1220,15 @@ export default function Component01NiduxOne() {
               <button className="px-6 py-2 rounded-full text-[var(--nx-text-3)] text-sm font-medium hover:text-[var(--nx-text)] transition">Anual</button>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center">
-            <div className="relative border border-[var(--nx-border)] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-bg)] hover:border-[#C9F31D]/20 transition-colors">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <div className="relative border border-white/[0.08] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-card,#131c2e)] hover:border-[#C9F31D]/20 transition-all duration-300">
               <h3 className="text-2xl md:text-3xl font-bold">Plus</h3>
               <div className="mt-5 flex items-baseline gap-1"><span className="text-5xl md:text-6xl font-bold text-[var(--nx-accent)]">$29</span><span className="text-[var(--nx-text-4)] text-base ml-1">/mes</span></div>
               <p className="mt-3 text-sm text-[var(--nx-text-3)]">Para negocios que inician en digital</p>
               <a href="#agendar" className="mt-6 flex items-center justify-center border border-[var(--nx-accent)] text-[var(--nx-accent)] font-semibold text-sm py-3.5 rounded-full hover:bg-[var(--nx-accent)] hover:text-black transition-all">Elegir Plan</a>
               <div className="mt-8"><p className="text-xs text-[var(--nx-text-5)] uppercase tracking-wider font-semibold mb-4">Incluye</p><ul className="space-y-3">{["POS + Ecommerce", "1 sucursal", "Facturación electrónica", "Soporte por chat"].map((f, i) => (<li key={i} className="flex items-center gap-3 text-sm text-[var(--nx-text-3)]"><CheckIcon />{f}</li>))}</ul></div>
             </div>
-            <div className="relative border-2 border-[#C9F31D]/50 rounded-2xl p-7 md:p-9 flex flex-col bg-gradient-to-b from-[#1a1aff]/30 via-[#2020cc]/20 to-[#0a0a0a] md:-my-6 shadow-[0_0_40px_rgba(201,243,29,0.08)]">
+            <div className="relative border-2 border-[#C9F31D]/40 rounded-2xl p-7 md:p-9 flex flex-col bg-gradient-to-b from-[#1a2a4a] via-[#131c2e] to-[#0e1525] md:-my-6 shadow-[0_0_40px_rgba(201,243,29,0.08)]">
               <div className="absolute -top-0 -right-0 overflow-hidden w-24 h-24"><div className="absolute top-3 -right-6 rotate-45 bg-[var(--nx-accent)] text-black text-[10px] font-bold py-1 px-8 tracking-wider">Popular</div></div>
               <h3 className="text-3xl md:text-4xl font-bold text-[var(--nx-accent)]">Pro</h3>
               <div className="mt-5 flex items-baseline gap-1"><span className="text-6xl md:text-7xl font-bold text-[var(--nx-text)]">$42</span><span className="text-[var(--nx-text-4)] text-base ml-1">/mes</span></div>
@@ -1236,7 +1236,7 @@ export default function Component01NiduxOne() {
               <a href="#agendar" className="mt-6 flex items-center justify-center bg-[var(--nx-accent)] text-black font-bold text-sm py-4 rounded-full hover:brightness-110 transition shadow-[0_0_20px_rgba(201,243,29,0.2)]">Elegir Plan</a>
               <div className="mt-8"><p className="text-xs text-[var(--nx-text-5)] uppercase tracking-wider font-semibold mb-4">Incluye</p><ul className="space-y-3">{["Todo del plan Plus", "POS + Ecommerce + Connect", "Hasta 3 sucursales", "WhatsApp Commerce", "Soporte prioritario", "Reportes avanzados"].map((f, i) => (<li key={i} className="flex items-center gap-3 text-sm text-[var(--nx-text-2)]"><CheckIcon />{f}</li>))}</ul></div>
             </div>
-            <div className="relative border border-[var(--nx-border)] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-bg)] hover:border-[#C9F31D]/20 transition-colors">
+            <div className="relative border border-white/[0.08] rounded-2xl p-7 md:p-9 flex flex-col bg-[var(--nx-card,#131c2e)] hover:border-[#C9F31D]/20 transition-all duration-300">
               <h3 className="text-2xl md:text-3xl font-bold">Corporativo</h3>
               <div className="mt-5 flex items-baseline gap-1"><span className="text-5xl md:text-6xl font-bold text-[var(--nx-accent)]">$59</span><span className="text-[var(--nx-text-4)] text-base ml-1">/mes</span></div>
               <p className="mt-3 text-sm text-[var(--nx-text-3)]">Para empresas en expansión</p>
@@ -1249,7 +1249,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 6. RESULTADOS — horizontal marquee stats ══════════════ */}
-      <section id="resultados" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-black">
+      <section id="resultados" data-reveal className="relative py-12 md:py-16 snap-start shrink-0 min-h-screen flex items-center overflow-hidden bg-[#0B1120]">
         <img src={imgEcommerceClick} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 w-full">
@@ -1293,7 +1293,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 10. ECOSISTEMA — Apple style ══════════════ */}
-      <section id="alianzas" data-reveal className="relative pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden snap-start shrink-0 min-h-screen bg-[#050508]">
+      <section id="alianzas" data-reveal className="relative pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden snap-start shrink-0 min-h-screen bg-[#0a0f1d]">
         {/* ambient glows */}
         <div className="absolute left-1/4 top-1/4 w-[500px] h-[500px] rounded-full bg-[#C9F31D]/[0.03] blur-[200px] pointer-events-none" />
         <div className="absolute right-1/4 bottom-1/4 w-[400px] h-[400px] rounded-full bg-teal-500/[0.03] blur-[180px] pointer-events-none" />
@@ -1312,23 +1312,24 @@ export default function Component01NiduxOne() {
           </div>
 
           {/* ecosystem grid — 4 columns, Lucide icons, minimal */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06] rounded-3xl overflow-hidden mb-20">
+          {/* Bento grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
             {[
-              { icon: <Package className="w-7 h-7" />, label: "Inventario", desc: "Sincronizado en tiempo real" },
-              { icon: <Store className="w-7 h-7" />, label: "Tienda Física", desc: "POS conectado al ecosistema" },
-              { icon: <ShoppingCart className="w-7 h-7" />, label: "Ecommerce", desc: "Venta online 24/7" },
-              { icon: <MessageCircle className="w-7 h-7" />, label: "WhatsApp", desc: "Ventas conversacionales" },
-              { icon: <Heart className="w-7 h-7" />, label: "Fidelización", desc: "QPONS y recompensas" },
-              { icon: <CreditCard className="w-7 h-7" />, label: "Pagos", desc: "10+ pasarelas integradas" },
-              { icon: <Truck className="w-7 h-7" />, label: "Logística", desc: "Envíos automatizados" },
-              { icon: <BarChart3 className="w-7 h-7" />, label: "Analytics", desc: "Dashboards en tiempo real" },
+              { icon: <Package className="w-7 h-7" />, label: "Inventario", desc: "Sincronizado en tiempo real entre tienda física y online. Cero descuadres.", span: "lg:col-span-1" },
+              { icon: <Store className="w-7 h-7" />, label: "Tienda Física", desc: "POS conectado al ecosistema completo. Cada venta se registra al instante.", span: "lg:col-span-1" },
+              { icon: <ShoppingCart className="w-7 h-7" />, label: "Ecommerce", desc: "Su tienda online profesional funcionando 24/7 con catálogo sincronizado.", span: "lg:col-span-1" },
+              { icon: <MessageCircle className="w-7 h-7" />, label: "WhatsApp Commerce", desc: "Ventas conversacionales automatizadas. Sus clientes compran sin salir del chat.", span: "lg:col-span-2" },
+              { icon: <Heart className="w-7 h-7" />, label: "Fidelización", desc: "QPONS: puntos, cupones y recompensas que hacen que sus clientes vuelvan.", span: "lg:col-span-1" },
+              { icon: <CreditCard className="w-7 h-7" />, label: "Pagos", desc: "10+ pasarelas integradas. BAC, BCR, PayPal, Tilopay y más.", span: "lg:col-span-1" },
+              { icon: <Truck className="w-7 h-7" />, label: "Logística", desc: "Envíos automatizados con Correos de CR, Moovin y más.", span: "lg:col-span-1" },
+              { icon: <BarChart3 className="w-7 h-7" />, label: "Analytics", desc: "Dashboards en tiempo real. Vea qué vende, qué no, y por qué.", span: "lg:col-span-1" },
             ].map((m, i) => (
-              <div key={i} className="group bg-[#0a0a0a] p-8 md:p-10 flex flex-col items-center text-center hover:bg-white/[0.03] transition-all duration-500 cursor-default">
-                <div className="text-white/30 group-hover:text-[#C9F31D] transition-colors duration-500 mb-4">
+              <div key={i} className={`group bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-7 md:p-8 hover:border-[#C9F31D]/20 hover:bg-[var(--nx-card-hover,#182438)] transition-all duration-300 cursor-default ${m.span}`}>
+                <div className="text-[#C9F31D]/60 group-hover:text-[#C9F31D] transition-colors duration-300 mb-4">
                   {m.icon}
                 </div>
-                <h4 className="text-sm font-semibold text-white/80 group-hover:text-white transition-colors">{m.label}</h4>
-                <p className="text-[11px] text-white/30 mt-1 group-hover:text-white/50 transition-colors">{m.desc}</p>
+                <h4 className="text-base font-semibold text-white group-hover:text-white transition-colors">{m.label}</h4>
+                <p className="text-sm text-white/40 mt-2 leading-relaxed group-hover:text-white/60 transition-colors">{m.desc}</p>
               </div>
             ))}
           </div>
@@ -1338,20 +1339,20 @@ export default function Component01NiduxOne() {
             <p className="text-white/20 text-xs tracking-[0.3em] uppercase font-semibold">Integraciones</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { label: "Pagos", icon: <CreditCard className="w-5 h-5" />, partners: ["BCR", "BN", "BAC", "PayPal", "Tilopay", "Zunify", "Placetopay", "Evertec", "LAFISE", "GreenPay"] },
               { label: "Logística", icon: <Truck className="w-5 h-5" />, partners: ["Correos de CR", "Moovin", "Growlat"] },
               { label: "Marketing", icon: <Globe className="w-5 h-5" />, partners: ["Meta", "WhatsApp", "Instagram", "Mailchimp", "Neonet", "PixelPay", "Mastercard"] },
             ].map((cat, i) => (
-              <div key={i}>
+              <div key={i} className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-[#C9F31D]">{cat.icon}</span>
                   <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider">{cat.label}</h3>
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-2">
                   {cat.partners.map((p) => (
-                    <span key={p} className="text-sm text-white/30 hover:text-[#C9F31D] transition-colors cursor-default">{p}</span>
+                    <span key={p} className="text-sm text-white/40 hover:text-[#C9F31D] transition-colors cursor-default">{p}</span>
                   ))}
                 </div>
               </div>
@@ -1396,7 +1397,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 11. CONTACT — premium redesign ══════════════ */}
-      <section id="contacto" data-reveal="scale" className="relative py-16 md:py-20 snap-start shrink-0 min-h-screen flex items-center overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(201,243,29,0.04) 0%, #0a0a0a 60%)" }}>
+      <section id="contacto" data-reveal="scale" className="relative py-16 md:py-20 snap-start shrink-0 min-h-screen flex items-center overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(201,243,29,0.04) 0%, #0B1120 60%)" }}>
         <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
           {/* centered header */}
           <div className="text-center mb-10">
@@ -1460,7 +1461,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ FINAL CTA ══════════════ */}
-      <section data-reveal="scale" className="relative py-20 md:py-28 snap-start shrink-0 min-h-[70vh] flex items-center overflow-hidden" style={{ background: "linear-gradient(180deg, #0a0a0a 0%, #0d100a 50%, #0a0a0a 100%)" }}>
+      <section data-reveal="scale" className="relative py-20 md:py-28 snap-start shrink-0 min-h-[70vh] flex items-center overflow-hidden" style={{ background: "linear-gradient(180deg, #0B1120 0%, #0d1525 50%, #0B1120 100%)" }}>
         {/* large decorative arrow */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none opacity-[0.06]">
           <svg width="300" height="300" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="0.5">
@@ -1499,7 +1500,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 9. BENEFICIO CLAVE — carousel cards ══════════════ */}
-      <section id="beneficios" data-reveal className="relative py-12 md:py-16 overflow-hidden snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(180deg, #0c0d0a 0%, #0a0a0a 100%)" }}>
+      <section id="beneficios" data-reveal className="relative py-12 md:py-16 overflow-hidden snap-start shrink-0 min-h-screen flex items-center" style={{ background: "linear-gradient(180deg, #0a1020 0%, #0B1120 100%)" }}>
         <GreenGlow className="absolute -left-40 top-1/2 -translate-y-1/2" />
 
         <div className="w-full relative z-10">
@@ -1577,7 +1578,7 @@ export default function Component01NiduxOne() {
       </section>
 
       {/* ══════════════ 13. FOOTER (always dark) ══════════════ */}
-      <footer data-theme="dark" className="relative pt-12 md:pt-16 pb-8 bg-[#0a0a0a] overflow-hidden snap-start shrink-0">
+      <footer data-theme="dark" className="relative pt-12 md:pt-16 pb-8 bg-[#0B1120] overflow-hidden snap-start shrink-0">
         {/* decorative images */}
         <img
           src={imgImage1472}

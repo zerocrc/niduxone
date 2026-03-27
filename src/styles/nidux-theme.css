@@ -5,12 +5,15 @@
 
 :root,
 [data-theme="dark"] {
-  --nx-bg: #0a0a0a;
-  --nx-bg-alt: #090a0a;
-  --nx-surface: rgba(255, 255, 255, 0.03);
-  --nx-surface-hover: rgba(255, 255, 255, 0.05);
+  --nx-bg: #0B1120;
+  --nx-bg-alt: #0a0f1d;
+  --nx-surface: rgba(255, 255, 255, 0.04);
+  --nx-surface-hover: rgba(255, 255, 255, 0.07);
   --nx-glass: rgba(255, 255, 255, 0.06);
-  --nx-glass-strong: rgba(255, 255, 255, 0.08);
+  --nx-glass-strong: rgba(255, 255, 255, 0.10);
+
+  --nx-card: #131c2e;
+  --nx-card-hover: #182438;
 
   --nx-text: #ffffff;
   --nx-text-2: rgba(255, 255, 255, 0.7);

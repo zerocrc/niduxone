@@ -343,7 +343,7 @@ function EcosystemBuilder() {
 
       {/* Right: Visual ecosystem preview */}
       <div className="lg:col-span-2">
-        <div className="bg-[var(--nx-surface)] border border-[var(--nx-border)] rounded-3xl p-6 min-h-[320px] flex flex-col">
+        <div className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-3xl p-6 min-h-[320px] flex flex-col">
           <p className="text-xs font-bold tracking-[0.15em] uppercase text-[var(--nx-accent)] mb-4">
             Tu ecosistema Nidux
           </p>
@@ -477,7 +477,7 @@ function RetentionSimulator() {
           onClick={simulating ? resetSimulation : startSimulation}
           className={`flex items-center justify-center gap-2 font-bold text-sm py-3.5 rounded-full transition w-full ${
             simulating
-              ? "bg-[var(--nx-surface)] border border-[var(--nx-border)] text-[var(--nx-text-3)] hover:bg-[var(--nx-surface)]"
+              ? "bg-[var(--nx-card,#131c2e)] border border-white/[0.08] text-[var(--nx-text-3)] hover:bg-[var(--nx-surface)]"
               : "bg-[var(--nx-accent)] text-black hover:brightness-110"
           }`}
         >
@@ -511,12 +511,12 @@ function RetentionSimulator() {
       <div className="flex justify-center">
         <div className="relative w-[280px] sm:w-[300px]">
           {/* Phone frame */}
-          <div className="bg-[#1a1a1a] rounded-[2.5rem] border-2 border-[#333] p-3 shadow-[0_0_60px_rgba(0,0,0,0.5)]">
+          <div className="bg-[#131c2e] rounded-[2.5rem] border-2 border-[#1e2d45] p-3 shadow-[0_0_60px_rgba(0,0,0,0.5)]">
             {/* Notch */}
             <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-10" />
 
             {/* Screen */}
-            <div className="bg-gradient-to-b from-[#0f1a0f] to-[#0a0a0a] rounded-[2rem] min-h-[420px] overflow-hidden relative pt-10 px-3 pb-4">
+            <div className="bg-gradient-to-b from-[#0f1a0f] to-[#0B1120] rounded-[2rem] min-h-[420px] overflow-hidden relative pt-10 px-3 pb-4">
               {/* Status bar */}
               <div className="flex justify-between items-center px-2 mb-6 text-[10px] text-[var(--nx-text-4)]">
                 <span>9:41</span>
@@ -616,7 +616,7 @@ export default function WhyNiduxSection() {
       id="por-que-nidux"
       data-reveal="scale"
       className="relative py-16 md:py-24 snap-start shrink-0 overflow-hidden"
-      style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(201,243,29,0.03) 0%, #0a0a0a 70%)" }}
+      style={{ background: "radial-gradient(ellipse at 50% 30%, rgba(201,243,29,0.03) 0%, #0B1120 70%)" }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -644,7 +644,7 @@ export default function WhyNiduxSection() {
                 className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-medium transition ${
                   isActive
                     ? "bg-[var(--nx-accent)] text-black shadow-[0_0_20px_rgba(201,243,29,0.2)]"
-                    : "bg-[var(--nx-surface)] border border-[var(--nx-border)] text-[var(--nx-text-3)] hover:border-[var(--nx-accent)]/40 hover:text-[var(--nx-text)]"
+                    : "bg-[var(--nx-card,#131c2e)] border border-white/[0.08] text-[var(--nx-text-3)] hover:border-[var(--nx-accent)]/40 hover:text-[var(--nx-text)]"
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -655,7 +655,7 @@ export default function WhyNiduxSection() {
         </div>
 
         {/* Tab content */}
-        <div className="bg-[var(--nx-surface)] border border-[var(--nx-border)] rounded-3xl p-6 md:p-10 backdrop-blur-sm">
+        <div className="bg-[var(--nx-card,#131c2e)] border border-white/[0.08] rounded-3xl p-6 md:p-10 backdrop-blur-sm">
           {activeTab === "calculator" && <SalesLeakCalculator />}
           {activeTab === "builder" && <EcosystemBuilder />}
           {activeTab === "simulator" && <RetentionSimulator />}
